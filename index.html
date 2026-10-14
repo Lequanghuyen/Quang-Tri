@@ -474,7 +474,7 @@
                     </button>
                 </div>
 
-                <!-- Nút chuyển sang phần làm bài tập trắc nghiệm trực tiếp -->
+                <!-- Nút mở hộp thoại trắc nghiệm trực tiếp -->
                 <div id="start-file-container" class="hidden flex flex-col items-center justify-center border-l border-white/10 md:pl-8 w-full md:w-auto" data-aos="fade-left">
                     <p class="text-green-300 text-sm font-semibold mb-3 text-center">🎉 Đã chọn xong người may mắn!</p>
                     <button onclick="openQuizModal()" class="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-amber-500 to-yellow-500 hover:from-amber-600 hover:to-yellow-600 text-slate-950 font-black text-lg rounded-2xl shadow-[0_0_25px_rgba(245,158,11,0.5)] transition-all transform hover:scale-105 cursor-pointer">
@@ -546,6 +546,7 @@
         </button>
     </div>
 
+    <!-- Hộp thoại Trắc Nghiệm Tương Tác -->
     <div id="quiz-modal" class="fixed inset-0 z-[200] custom-modal hidden flex items-center justify-center p-4">
         <div class="bg-slate-900 border-2 border-emerald-500/60 p-6 md:p-8 rounded-3xl max-w-2xl w-full shadow-2xl relative text-white">
             <div class="flex justify-between items-center border-b border-emerald-500/20 pb-4 mb-6">
@@ -567,8 +568,8 @@
             <div id="quiz-body">
                 <div id="quiz-intro" class="text-center py-6">
                     <h4 class="text-2xl font-black mb-3 text-emerald-400">Chinh Phục Thử Thách Hội Nhập</h4>
-                    <p class="text-gray-300 text-sm mb-6">Tham gia trả lời 8 câu hỏi ngẫu nhiên (5 câu dễ, 2 câu trung bình suy luận và 1 câu cực khó). Mỗi câu có 30 giây suy nghĩ.</p>
-                    <button onclick="startQuizGame()" class="px-8 py-3 bg-gradient-to-r from-primary to-teal-400 text-slate-950 font-black rounded-xl shadow-lg hover:scale-105 transition">
+                    <p class="text-gray-300 text-sm mb-6">Tham gia trả lời 8 câu hỏi ngẫu nhiên. Mỗi câu có 30 giây suy nghĩ. Hệ thống có đầy đủ âm thanh vui nhộn!</p>
+                    <button onclick="startQuizGame()" class="px-8 py-3 bg-gradient-to-r from-primary to-teal-400 text-slate-950 font-black rounded-xl shadow-lg hover:scale-105 transition cursor-pointer">
                         BẮT ĐẦU LÀM NGAY <i class="fas fa-play ml-2"></i>
                     </button>
                 </div>
@@ -611,8 +612,8 @@
                         <i class="fas fa-trophy text-amber-400"></i>
                     </div>
                     <h4 class="text-2xl font-black text-white">HOÀN THÀNH BÀI LÀM!</h4>
-                    <p id="quiz-score-summary" class="text-lg text-emerald-200 font-bold">Tổng điểm: 0.0 / 10.0</p>
-                    <button onclick="resetQuizGame()" class="px-8 py-3 bg-gradient-to-r from-primary to-teal-400 text-slate-950 font-black rounded-xl shadow-lg hover:scale-105 transition">
+                    <p id="quiz-score-summary" class="text-lg text-emerald-200 font-bold">Tổng điểm: 0.0 / 8.0</p>
+                    <button onclick="resetQuizGame()" class="px-8 py-3 bg-gradient-to-r from-primary to-teal-400 text-slate-950 font-black rounded-xl shadow-lg hover:scale-105 transition cursor-pointer">
                         LÀM LẠI BÀI TẬP
                     </button>
                 </div>
@@ -891,7 +892,7 @@
             for (let i = 0; i < 4; i++) {
                 const btn = document.getElementById(`quiz-ans-${i}`);
                 btn.disabled = false;
-                btn.className = "answer-btn p-3.5 text-left text-sm font-semibold text-white flex items-center gap-3";
+                btn.className = "answer-btn p-3.5 text-left text-sm font-semibold text-white flex items-center gap-3 cursor-pointer";
                 document.getElementById(`quiz-text-${i}`).textContent = shuffledOpts[i];
             }
 
