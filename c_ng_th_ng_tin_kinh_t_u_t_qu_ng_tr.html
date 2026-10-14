@@ -1,0 +1,976 @@
+<!DOCTYPE html>
+<html lang="vi" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cổng Thông Tin Kinh Tế & Đầu Tư Quảng Trị</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- FontAwesome & Google Fonts -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                    colors: {
+                        primary: '#059669',
+                        secondary: '#2563eb',
+                        dark: '#0f172a',
+                        accent: '#d97706',
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #f1f5f9; }
+        ::-webkit-scrollbar-thumb { background: #059669; border-radius: 4px; }
+        
+        body { font-family: 'Inter', sans-serif; overflow-x: hidden; background-color: #f8fafc; color: #334155; }
+        
+        .hero-bg {
+            background-image: linear-gradient(rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.85)), url('https://cdn2.tuoitre.vn/nld/291774122806476800/2021/12/20/7-cai-nhat-cua-phong-nha-ke-bang-1639936654793597781412.jpg'); 
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+        }
+
+        .img-zoom { overflow: hidden; }
+        .img-zoom img { transition: transform 0.8s ease; }
+        .img-zoom:hover img { transform: scale(1.05); }
+
+        .slide { opacity: 0; transition: opacity 0.8s ease-in-out, transform 0.8s ease; position: absolute; inset: 0; z-index: 0; pointer-events: none; transform: translateX(50px); }
+        .slide.active { opacity: 1; z-index: 10; pointer-events: auto; transform: translateX(0); }
+
+        .answer-btn {
+            background: rgba(30, 41, 59, 0.9);
+            border: 2px solid rgba(52, 211, 153, 0.3);
+            border-radius: 1rem;
+            transition: all 0.25s ease;
+        }
+        .answer-btn:hover:not(:disabled) {
+            border-color: #10b981;
+            background: rgba(16, 185, 129, 0.15);
+            transform: translateY(-2px);
+        }
+        .answer-btn.correct { border-color: #22c55e !important; background: rgba(34, 197, 94, 0.25) !important; }
+        .answer-btn.wrong { border-color: #ef4444 !important; background: rgba(239, 68, 68, 0.25) !important; }
+        .custom-modal { backdrop-filter: blur(8px); background: rgba(0,0,0,0.85); }
+    </style>
+</head>
+<body class="flex flex-col min-h-screen justify-between">
+
+    <nav class="fixed w-full z-50 glass-nav shadow-sm transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 bg-gradient-to-br from-primary to-teal-400 rounded-xl flex items-center justify-center text-white font-black text-2xl shadow-lg">
+                        <i class="fas fa-globe-asia"></i>
+                    </div>
+                    <div>
+                        <span class="block font-bold text-xl text-dark leading-tight">Quảng Trị</span>
+                        <span class="block text-xs font-semibold text-primary tracking-widest uppercase">Cổng Hội Nhập & Đầu Tư</span>
+                    </div>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#tong-quan" class="text-gray-600 hover:text-primary font-semibold transition-colors">Du Lịch</a>
+                    <a href="#bien" class="text-gray-600 hover:text-primary font-semibold transition-colors">Biển & Cảng</a>
+                    <a href="#nang-luong" class="text-gray-600 hover:text-primary font-semibold transition-colors">Năng Lượng</a>
+                    <a href="#logistics" class="text-gray-600 hover:text-primary font-semibold transition-colors">Logistics</a>
+                    <a href="#thanh-tuu" class="text-gray-600 hover:text-primary font-semibold transition-colors">Thành Tựu</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <header id="hero" class="hero-bg relative h-screen flex flex-col items-center justify-center text-center">
+        <div class="relative z-10 px-4 max-w-5xl mx-auto mt-20">
+            <div class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white/10 border border-white/20 text-green-300 font-semibold mb-8 backdrop-blur-md shadow-lg" data-aos="fade-down">
+                <span class="w-2.5 h-2.5 rounded-full bg-green-400 animate-ping"></span>
+                Cổng Thông Tin Kinh Tế Trực Tuyến
+            </div>
+            <h1 class="text-5xl md:text-7xl font-extrabold text-white mb-6 leading-tight drop-shadow-2xl" data-aos="zoom-in" data-aos-delay="100">
+                Đặc Điểm Quá Trình <br />
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-teal-300">Hội Nhập Kinh Tế Quốc Tế</span>
+            </h1>
+            <p class="text-xl md:text-3xl text-gray-200 mb-12 max-w-4xl mx-auto font-light drop-shadow-lg" data-aos="fade-up" data-aos-delay="200">
+                Tỉnh Quảng Trị (Sau sáp nhập Quảng Bình & Quảng Trị cũ)
+            </p>
+        </div>
+        
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <a href="#tong-quan" class="text-white/50 hover:text-white text-3xl"><i class="fas fa-chevron-down"></i></a>
+        </div>
+    </header>
+
+    <section id="tong-quan" class="py-24 bg-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <span class="text-primary font-bold tracking-widest uppercase text-sm mb-2 block">1. Lợi thế từ sự hợp nhất</span>
+                <h2 class="text-4xl md:text-5xl font-extrabold text-dark">Tiềm Năng Du Lịch Cực Lớn</h2>
+                <div class="w-24 h-1.5 bg-gradient-to-r from-primary to-cyan-500 mx-auto rounded-full mt-6"></div>
+            </div>
+
+            <div class="flex flex-col lg:flex-row gap-16 items-center">
+                <div class="lg:w-1/2" data-aos="fade-right">
+                    <div class="w-16 h-16 bg-green-50 text-primary rounded-2xl flex items-center justify-center text-3xl mb-6 shadow-sm border border-green-100">
+                        <i class="fas fa-mountain"></i>
+                    </div>
+                    <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+                        Sự sáp nhập mang lại cho "Siêu tỉnh" mới một hệ sinh thái du lịch đồ sộ hiếm nơi nào có được. Nổi bật nhất là việc thừa hưởng toàn bộ <strong>Di sản thiên nhiên thế giới Vườn Quốc gia Phong Nha - Kẻ Bàng</strong> từ Quảng Bình cũ.
+                    </p>
+                    <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+                        Chính quyền đang tạo ra các chuỗi sản phẩm du lịch đẳng cấp quốc tế, kết nối du lịch mạo hiểm, khám phá hang động với du lịch văn hóa tâm linh, thu hút mạnh mẽ nguồn vốn FDI vào "ngành công nghiệp không khói".
+                    </p>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-4">
+                            <i class="fas fa-check-circle text-primary text-xl mt-1"></i>
+                            <span class="text-lg font-medium text-gray-700">Hệ thống hang động kỳ vĩ nhất thế giới.</span>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <i class="fas fa-check-circle text-primary text-xl mt-1"></i>
+                            <span class="text-lg font-medium text-gray-700">Quy hoạch hạ tầng nghỉ dưỡng sinh thái chuẩn 5 sao.</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="lg:w-1/2 w-full" data-aos="fade-left">
+                    <div class="relative rounded-3xl overflow-hidden shadow-2xl img-zoom border border-gray-100 group">
+                        <img src="https://cdn2.tuoitre.vn/nld/291774122806476800/2021/12/20/dong-thien-duong-2-16399371619401970349486.jpg" alt="Động Thiên Đường" class="w-full h-[500px] object-cover">
+                        <div class="absolute bottom-6 left-6 right-6 bg-white/95 backdrop-blur-md p-4 rounded-xl shadow-lg border border-white">
+                            <h4 class="font-bold text-dark text-lg"><i class="fas fa-map-marker-alt text-primary mr-2"></i>Động Thiên Đường</h4>
+                            <p class="text-sm text-gray-600 mt-1">Kỳ quan tráng lệ tại VQG Phong Nha - Kẻ Bàng.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="bien" class="py-24 bg-gray-50 border-y border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <span class="text-secondary font-bold tracking-widest uppercase text-sm mb-2 block">2. Cửa ngõ giao thương</span>
+                <h2 class="text-4xl md:text-5xl font-extrabold text-dark">Mặt Tiền Hướng Biển Rộng Lớn</h2>
+                <div class="w-24 h-1.5 bg-gradient-to-r from-secondary to-blue-400 mx-auto rounded-full mt-6"></div>
+            </div>
+
+            <div class="flex flex-col lg:flex-row-reverse gap-16 items-center">
+                <div class="lg:w-1/2" data-aos="fade-left">
+                    <div class="w-16 h-16 bg-blue-50 text-secondary rounded-2xl flex items-center justify-center text-3xl mb-6 shadow-sm border border-blue-100">
+                        <i class="fas fa-water"></i>
+                    </div>
+                    <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+                        Sự kết nối địa lý tạo ra một dải bờ biển dài xuyên suốt. Đây là lợi thế chiến lược không thể chối cãi để phát triển kinh tế biển đa ngành, đặc biệt là hình thành <strong>các cụm cảng nước sâu trọng điểm</strong>.
+                    </p>
+                    <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+                        Tỉnh đang dồn lực đầu tư và kêu gọi vốn để mở rộng quy mô bến bãi, nâng cấp luồng lạch, cho phép đón các tàu hàng trọng tải hàng chục vạn tấn vươn ra quốc tế.
+                    </p>
+                    
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
+                            <i class="fas fa-anchor text-3xl text-secondary mb-4 block"></i>
+                            <h4 class="font-bold text-xl text-dark mb-2">Cảng Hòn La</h4>
+                            <p class="text-gray-500 text-sm">Trung tâm dịch vụ dầu khí và hàng hóa tổng hợp khu vực.</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
+                            <i class="fas fa-ship text-3xl text-blue-400 mb-4 block"></i>
+                            <h4 class="font-bold text-xl text-dark mb-2">Cảng Mỹ Thủy</h4>
+                            <p class="text-gray-500 text-sm">Cửa ngõ ra Biển Đông của hành lang kinh tế Đông - Tây.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:w-1/2 w-full" data-aos="fade-right">
+                    <div class="relative rounded-3xl overflow-hidden shadow-2xl img-zoom border border-gray-100">
+                        <img src="https://media.thuonghieucongluan.vn/uploads/2026/08/05/cang-hon-la-1785905404.jpg" alt="Cảng Hòn La" class="w-full h-[500px] object-cover">
+                        <div class="absolute top-6 left-6 bg-white/90 backdrop-blur-md px-5 py-2.5 rounded-full shadow-lg border border-white flex items-center gap-2">
+                            <span class="relative flex h-3 w-3">
+                              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span>
+                              <span class="relative inline-flex rounded-full h-3 w-3 bg-blue-600"></span>
+                            </span>
+                            <span class="font-bold text-dark text-sm tracking-wide">Tàu hàng tại Cảng Hòn La</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="nang-luong" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <span class="text-teal-600 font-bold tracking-widest uppercase text-sm mb-2 block">3. Chuyển dịch Cơ cấu</span>
+                <h2 class="text-4xl md:text-5xl font-extrabold text-dark">Thủ Phủ Năng Lượng Tái Tạo</h2>
+                <div class="w-24 h-1.5 bg-gradient-to-r from-teal-500 to-green-400 mx-auto rounded-full mt-6"></div>
+            </div>
+
+            <div class="flex flex-col lg:flex-row gap-16 items-center">
+                <div class="lg:w-1/2 order-2 lg:order-1" data-aos="fade-right">
+                    <div class="relative rounded-3xl overflow-hidden shadow-2xl img-zoom border border-gray-100 group">
+                        <img src="https://quangbinhtravel.vn/wp-content/uploads/2025/08/san-may.jpg" alt="Điện gió Hướng Hóa" class="w-full h-[500px] object-cover">
+                        <div class="absolute bottom-6 right-6 bg-white/95 backdrop-blur-md p-4 rounded-xl shadow-lg border border-white">
+                            <h4 class="font-bold text-dark text-lg"><i class="fas fa-wind text-teal-500 mr-2"></i>Điện gió Hướng Hóa</h4>
+                            <p class="text-sm text-gray-600 mt-1">Biến gió Lào thành nguồn năng lượng xanh.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:w-1/2 order-1 lg:order-2" data-aos="fade-left">
+                    <div class="w-16 h-16 bg-teal-50 text-teal-600 rounded-2xl flex items-center justify-center text-3xl mb-6 shadow-sm border border-teal-100">
+                        <i class="fas fa-solar-panel"></i>
+                    </div>
+                    <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+                        Hội nhập kinh tế không chỉ là xuất nhập khẩu hàng hóa mà còn là khả năng đón bắt xu hướng công nghệ toàn cầu. Tỉnh đã và đang biến bất lợi về khí hậu khắc nghiệt (nắng nóng, gió Tây Nam) thành mỏ vàng năng lượng.
+                    </p>
+                    <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+                        Hàng loạt dự án <strong>Điện gió tại khu vực phía Tây (Hướng Hóa)</strong> và Điện mặt trời, nhiệt điện khí đang biến vùng đất này thành trung tâm năng lượng của miền Trung, cung cấp điện cho lưới quốc gia và hướng tới xuất khẩu sang Lào.
+                    </p>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-4">
+                            <i class="fas fa-arrow-right text-teal-500 mt-1.5"></i>
+                            <span class="text-lg font-medium text-gray-700">Thu hút dòng vốn FDI khổng lồ vào năng lượng sạch.</span>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <i class="fas fa-arrow-right text-teal-500 mt-1.5"></i>
+                            <span class="text-lg font-medium text-gray-700">Tạo nguồn thu bền vững, ổn định cho ngân sách địa phương.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="logistics" class="py-24 bg-gray-50 border-y border-gray-200 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-5 pointer-events-none" style="background-image: radial-gradient(#059669 1px, transparent 1px); background-size: 30px 30px;"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
+                <span class="text-accent font-bold tracking-widest uppercase text-sm mb-2 block">4. Xương Sống Kinh Tế</span>
+                <h2 class="text-4xl font-extrabold text-dark mb-6">Đột Phá Ngành Logistics & Cửa Khẩu</h2>
+                <div class="w-24 h-1.5 bg-gradient-to-r from-accent to-yellow-400 mx-auto rounded-full mt-6 mb-6"></div>
+                <p class="text-xl text-gray-600 leading-relaxed">
+                    Xây dựng hệ sinh thái Logistics hoàn chỉnh, kết nối liền mạch từ Cửa khẩu quốc tế Lao Bảo đến các cảng biển, tạo thành hành lang thương mại xuyên biên giới sôi động.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-3xl p-8 border border-gray-100 hover:shadow-xl transition-all duration-300 shadow-sm" data-aos="fade-up" data-aos-delay="0">
+                    <div class="w-14 h-14 bg-orange-50 rounded-full flex items-center justify-center text-accent text-2xl shadow-sm mb-6">
+                        <i class="fas fa-truck-fast"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-dark mb-4">Hành Lang Đông - Tây (EWEC)</h3>
+                    <p class="text-gray-600">Đẩy mạnh lưu thông hàng hóa kết nối trực tiếp Việt Nam với Lào, Thái Lan và Myanmar. Cửa khẩu Lao Bảo là huyết mạch của tuyến đường này.</p>
+                </div>
+                
+                <div class="bg-white rounded-3xl p-8 border border-gray-100 hover:shadow-xl transition-all duration-300 shadow-sm" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-14 h-14 bg-orange-50 rounded-full flex items-center justify-center text-accent text-2xl shadow-sm mb-6">
+                        <i class="fas fa-boxes-stacked"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-dark mb-4">Cảng Cạn & Kho Bãi</h3>
+                    <p class="text-gray-600">Xây dựng các trung tâm kho vận (ICD), bãi tập kết container hiện đại quy mô lớn phục vụ sang tải, lưu giữ hàng hóa xuất nhập khẩu.</p>
+                </div>
+
+                <div class="bg-white rounded-3xl p-8 border border-gray-100 hover:shadow-xl transition-all duration-300 shadow-sm" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-14 h-14 bg-orange-50 rounded-full flex items-center justify-center text-accent text-2xl shadow-sm mb-6">
+                        <i class="fas fa-file-invoice"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-dark mb-4">Hải Quan Điện Tử</h3>
+                    <p class="text-gray-600">Áp dụng công nghệ số một cửa, rút ngắn tối đa thời gian thông quan hàng hóa, tạo sự thông thoáng cho các doanh nghiệp.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="fdi" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <span class="text-purple-600 font-bold tracking-widest uppercase text-sm mb-2 block">5. Trải thảm đỏ đầu tư</span>
+                <h2 class="text-4xl md:text-5xl font-extrabold text-dark">Thu Hút Đầu Tư Cụm Công Nghiệp</h2>
+                <div class="w-24 h-1.5 bg-gradient-to-r from-purple-600 to-indigo-500 mx-auto rounded-full mt-6"></div>
+            </div>
+
+            <div class="flex flex-col lg:flex-row gap-16 items-center">
+                <div class="lg:w-1/2" data-aos="fade-right">
+                    <div class="w-16 h-16 bg-purple-50 text-purple-600 rounded-2xl flex items-center justify-center text-3xl mb-6 shadow-sm border border-purple-100">
+                        <i class="fas fa-industry"></i>
+                    </div>
+                    <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+                        Hội nhập thành công là nhờ vào chính sách mở cửa linh hoạt. Tỉnh đã thành lập và mở rộng nhiều Khu kinh tế trọng điểm (như <strong>Khu kinh tế Đông Nam</strong>, Khu công nghiệp Tây Bắc Đồng Hới).
+                    </p>
+                    <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+                        Các chính sách ưu đãi về thuế, tiền thuê đất, cùng với nguồn lao động dồi dào và hạ tầng giao thông kết nối đã khiến địa phương trở thành bến đỗ lý tưởng cho các nhà đầu tư sản xuất, chế biến gỗ, dệt may và công nghệ cao.
+                    </p>
+                    <div class="bg-gray-50 border border-gray-200 p-4 rounded-xl flex items-center gap-4">
+                        <i class="fas fa-handshake text-3xl text-purple-600"></i>
+                        <div>
+                            <h5 class="font-bold text-dark">Hợp tác quốc tế</h5>
+                            <p class="text-sm text-gray-500">Đẩy mạnh xúc tiến đầu tư từ Hàn Quốc, Nhật Bản, Thái Lan.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:w-1/2 w-full" data-aos="fade-left">
+                    <div class="relative rounded-3xl overflow-hidden shadow-2xl img-zoom border border-gray-100 group">
+                        <img src="https://media.baodautu.vn/Images/chicuong/2024/07/02/11s.jpg" alt="Khu kinh tế" class="w-full h-[500px] object-cover">
+                        <div class="absolute top-6 right-6 bg-white/95 backdrop-blur-md px-5 py-2.5 rounded-full shadow-lg border border-white">
+                            <span class="font-bold text-purple-700 text-sm tracking-wide">Quy hoạch KCN hiện đại</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="slider-section" class="py-16 bg-dark relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-10">
+                <h2 class="text-3xl font-bold text-white">Hình Ảnh Trọng Điểm Hội Nhập</h2>
+                <p class="text-gray-400 mt-2">Các dự án và địa điểm phát triển kinh tế trọng điểm thực tế</p>
+            </div>
+            
+            <div class="relative w-full h-[550px] rounded-3xl overflow-hidden shadow-2xl border border-white/10 bg-black group">
+                
+                <!-- Slide 1: Suối khoáng nóng Bang Onsen -->
+                <div class="slide active">
+                    <img src="https://gonow.com.vn/wp-content/uploads/2025/12/onsen-quang-binh-1.jpg" class="w-full h-full object-cover opacity-50" alt="Suối khoáng nóng Bang Onsen">
+                    <div class="absolute inset-0 bg-gradient-to-r from-black/90 via-black/50 to-transparent flex flex-col justify-center p-12 md:p-20 text-white">
+                        <div class="max-w-2xl">
+                            <span class="px-4 py-1.5 bg-red-500 text-sm font-bold uppercase rounded-full inline-block mb-6 shadow-lg">Du Lịch Nghỉ Dưỡng</span>
+                            <h3 class="text-5xl font-extrabold mb-6 leading-tight">Suối Khoáng Nóng Bang Onsen</h3>
+                            <p class="text-xl text-gray-200 leading-relaxed border-l-4 border-red-500 pl-4">
+                                Dòng suối khoáng nóng tự nhiên nhiệt độ sôi kỷ lục 105°C, được đầu tư theo tiêu chuẩn Nhật Bản, nâng tầm du lịch nghỉ dưỡng cao cấp quốc tế.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 2: KCN Quảng Trị -->
+                <div class="slide">
+                    <img src="https://kland.vn/upload/industrypark/industrial_park_khu-cong-nghiep-quang-tri-tinh-quang-tri.jpeg" class="w-full h-full object-cover opacity-50" alt="Khu công nghiệp Quảng Trị">
+                    <div class="absolute inset-0 bg-gradient-to-r from-black/90 via-black/50 to-transparent flex flex-col justify-center p-12 md:p-20 text-white">
+                        <div class="max-w-2xl">
+                            <span class="px-4 py-1.5 bg-primary text-sm font-bold uppercase rounded-full inline-block mb-6 shadow-lg">Hợp Tác Quốc Tế</span>
+                            <h3 class="text-5xl font-extrabold mb-6 leading-tight">Khu Công Nghiệp Quảng Trị</h3>
+                            <p class="text-xl text-gray-200 leading-relaxed border-l-4 border-primary pl-4">
+                                Điểm đến chiến lược của các tập đoàn đa quốc gia, thu hút mạnh mẽ dòng vốn FDI vào lĩnh vực công nghiệp xanh và sản xuất thông minh.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 3: Sân bay Quảng Trị -->
+                <div class="slide">
+                    <img src="https://images2.thanhnien.vn/528068263637045248/2024/7/6/2-phoi-canh-cang-hang-khong-quang-tringoc-duong-1720282032130883707421.jpg" class="w-full h-full object-cover opacity-50" alt="Cảng Hàng Không Quảng Trị">
+                    <div class="absolute inset-0 bg-gradient-to-r from-black/90 via-black/50 to-transparent flex flex-col justify-center p-12 md:p-20 text-white">
+                        <div class="max-w-2xl">
+                            <span class="px-4 py-1.5 bg-blue-600 text-sm font-bold uppercase rounded-full inline-block mb-6 shadow-lg">Hạ Tầng Giao Thông</span>
+                            <h3 class="text-5xl font-extrabold mb-6 leading-tight">Cảng Hàng Không Quảng Trị</h3>
+                            <p class="text-xl text-gray-200 leading-relaxed border-l-4 border-blue-600 pl-4">
+                                Dự án trọng điểm quốc gia phá vỡ thế độc đạo về giao thông, mở ra bầu trời kết nối trực tiếp địa phương với các trung tâm kinh tế lớn.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 4: Ven biển Quảng Trị -->
+                <div class="slide">
+                    <img src="https://media.baodautu.vn/Images/ngoctan/2024/10/02/ven_bien_Quang_Tri.jpg" class="w-full h-full object-cover opacity-50" alt="Khu vực ven biển Quảng Trị">
+                    <div class="absolute inset-0 bg-gradient-to-r from-black/90 via-black/50 to-transparent flex flex-col justify-center p-12 md:p-20 text-white">
+                        <div class="max-w-2xl">
+                            <span class="px-4 py-1.5 bg-cyan-500 text-sm font-bold uppercase rounded-full inline-block mb-6 shadow-lg">Kinh Tế Biển</span>
+                            <h3 class="text-5xl font-extrabold mb-6 leading-tight">Hành Lang Ven Biển</h3>
+                            <p class="text-xl text-gray-200 leading-relaxed border-l-4 border-cyan-500 pl-4">
+                                Không gian phát triển đô thị sinh thái, du lịch nghỉ dưỡng và các khu kinh tế ven biển năng động gắn liền với hệ thống cảng nước sâu.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 5: Đảo Cồn Cỏ -->
+                <div class="slide">
+                    <img src="https://cdn-images.vtv.vn/thumb_w/1200/2017/conco-1510926291892.jpg" class="w-full h-full object-cover opacity-50" alt="Đảo Cồn Cỏ">
+                    <div class="absolute inset-0 bg-gradient-to-r from-black/90 via-black/50 to-transparent flex flex-col justify-center p-12 md:p-20 text-white">
+                        <div class="max-w-2xl">
+                            <span class="px-4 py-1.5 bg-teal-500 text-sm font-bold uppercase rounded-full inline-block mb-6 shadow-lg">Biển Đảo Chiến Lược</span>
+                            <h3 class="text-5xl font-extrabold mb-6 leading-tight">Đảo Ngọc Cồn Cỏ</h3>
+                            <p class="text-xl text-gray-200 leading-relaxed border-l-4 border-teal-500 pl-4">
+                                Tiền tiêu giữa Biển Đông, phát triển mạnh mẽ kinh tế biển đảo kết hợp du lịch sinh thái biển và bảo vệ chủ quyền biên hải quốc gia.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Nút điều khiển Slider -->
+                <button id="btnPrev" class="absolute left-6 top-1/2 -translate-y-1/2 w-14 h-14 bg-white/10 hover:bg-primary text-white rounded-full flex items-center justify-center transition-all z-20 backdrop-blur-md border border-white/20 opacity-0 group-hover:opacity-100 shadow-xl">
+                    <i class="fas fa-chevron-left text-xl"></i>
+                </button>
+                <button id="btnNext" class="absolute right-6 top-1/2 -translate-y-1/2 w-14 h-14 bg-white/10 hover:bg-primary text-white rounded-full flex items-center justify-center transition-all z-20 backdrop-blur-md border border-white/20 opacity-0 group-hover:opacity-100 shadow-xl">
+                    <i class="fas fa-chevron-right text-xl"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section id="thanh-tuu-video" class="py-24 bg-gray-50 border-t border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <span class="text-primary font-bold tracking-widest uppercase text-sm mb-2 block">Thành Tựu Nổi Bật</span>
+                <h2 class="text-4xl font-extrabold text-dark mb-4">Tăng Trưởng Hội Nhập Đột Phá</h2>
+            </div>
+            
+            <div class="flex justify-center" data-aos="fade-up">
+                <div class="bg-white p-3 rounded-3xl shadow-xl border border-gray-100 w-full max-w-4xl transition-transform hover:-translate-y-2 duration-300">
+                    <div class="relative w-full aspect-[4/3] overflow-hidden rounded-2xl bg-black">
+                        <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Freel%2F1403574271943165&show_text=false" 
+                                class="absolute top-0 left-0 w-full h-full" 
+                                style="border:none;overflow:hidden;" 
+                                scrolling="no" frameborder="0" 
+                                allowfullscreen="true" 
+                                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="quay-so" class="py-24 bg-gradient-to-br from-slate-900 via-dark to-slate-800 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#10b981 1px, transparent 1px); background-size: 40px 40px;"></div>
+        
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <div data-aos="fade-up">
+                <span class="text-green-400 font-bold tracking-widest uppercase text-sm mb-2 block"><i class="fas fa-gift mr-2"></i>Giao lưu & Tương tác</span>
+                <h2 class="text-4xl md:text-5xl font-extrabold text-white mb-8">Con Số May Mắn</h2>
+            </div>
+
+            <div class="bg-white/10 backdrop-blur-xl border border-white/20 p-8 md:p-12 rounded-3xl shadow-2xl flex flex-col md:flex-row items-center justify-center gap-8" data-aos="zoom-in" data-aos-delay="100">
+                <div class="flex-1 w-full">
+                    <div id="lucky-display" class="h-40 flex items-center justify-center bg-black/40 rounded-2xl border-2 border-white/10 mb-6 overflow-hidden shadow-inner">
+                        <div class="text-center w-full px-4">
+                            <div id="lucky-sbd" class="text-2xl font-bold text-gray-400 mb-2 font-mono tracking-widest">SBD: --</div>
+                            <div id="lucky-name" class="text-2xl md:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-green-300 to-teal-400 transition-all duration-300">Nhấn Quay Số!</div>
+                        </div>
+                    </div>
+
+                    <button id="btn-spin" class="relative inline-flex items-center justify-center px-8 py-4 text-lg font-bold text-white transition-all duration-300 bg-gradient-to-r from-primary to-teal-500 border border-transparent rounded-full hover:from-green-600 hover:to-teal-600 focus:outline-none shadow-[0_0_20px_rgba(5,150,105,0.4)]">
+                        <i class="fas fa-random mr-3"></i> <span>Quay Chọn Người May Mắn</span>
+                    </button>
+                </div>
+
+                <!-- Nút chuyển sang phần làm bài tập trắc nghiệm trực tiếp -->
+                <div id="start-file-container" class="hidden flex flex-col items-center justify-center border-l border-white/10 md:pl-8 w-full md:w-auto" data-aos="fade-left">
+                    <p class="text-green-300 text-sm font-semibold mb-3 text-center">🎉 Đã chọn xong người may mắn!</p>
+                    <button onclick="openQuizModal()" class="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-amber-500 to-yellow-500 hover:from-amber-600 hover:to-yellow-600 text-slate-950 font-black text-lg rounded-2xl shadow-[0_0_25px_rgba(245,158,11,0.5)] transition-all transform hover:scale-105 cursor-pointer">
+                        <i class="fas fa-play-circle text-xl"></i> Bắt Đầu Làm
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="lien-he" class="bg-dark text-white pt-16 pb-8 border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mb-12">
+                <div class="lg:col-span-2">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-10 h-10 bg-gradient-to-br from-primary to-teal-400 rounded-lg flex items-center justify-center text-white font-bold text-xl shadow-lg">
+                            <i class="fas fa-globe-asia"></i>
+                        </div>
+                        <span class="font-extrabold text-2xl tracking-tight">Invest Quảng Trị</span>
+                    </div>
+                    <p class="text-gray-400 leading-relaxed max-w-2xl text-justify">
+                        Cổng thông tin được thiết kế chuyên nghiệp nhằm cung cấp cái nhìn toàn cảnh và chi tiết nhất về quá trình hội nhập kinh tế quốc tế của tỉnh Quảng Trị. Nền tảng khai thác các khía cạnh trọng điểm từ tiềm năng du lịch, hạ tầng logistics đến các thành tựu thu hút đầu tư FDI nổi bật.
+                    </p>
+                </div>
+
+                <div>
+                    <h3 class="text-xl font-bold mb-6 text-white border-b border-gray-700 pb-2 inline-block">Liên Hệ Với Chúng Tôi</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-center gap-4 text-gray-300 hover:text-white transition-colors">
+                            <div class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center text-primary">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <span class="font-medium">Lê Quang Huyền</span>
+                        </li>
+                        <li class="flex items-center gap-4 text-gray-300 hover:text-white transition-colors">
+                            <div class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center text-primary">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <a href="tel:0342026134" class="font-medium hover:text-primary transition-colors">0342026134</a>
+                        </li>
+                        <li class="flex items-center gap-4 text-gray-300 hover:text-white transition-colors">
+                            <div class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center text-primary">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <a href="mailto:lequanghuye@gmail.com" class="font-medium hover:text-primary transition-colors">lequanghuye@gmail.com</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-500">
+                <p>&copy; 2026 Cổng thông tin Hội nhập Kinh tế Quảng Trị. Phụ trách nội dung: Lê Quang Huyền.</p>
+                <div class="flex space-x-4">
+                    <a href="#" class="w-8 h-8 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary hover:text-white transition-all"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="w-8 h-8 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary hover:text-white transition-all"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="w-8 h-8 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary hover:text-white transition-all"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Nút điều hướng thuyết trình (Lên/Xuống) ở góc phải -->
+    <div class="fixed right-6 top-1/2 transform -translate-y-1/2 z-[100] flex flex-col gap-4 p-3 bg-white/40 backdrop-blur-md rounded-full border border-white/50 shadow-[0_0_20px_rgba(0,0,0,0.15)]">
+        <button id="navUp" title="Slide trước" class="w-12 h-12 bg-dark hover:bg-primary text-white rounded-full transition-all flex justify-center items-center cursor-pointer shadow-lg hover:-translate-y-1">
+            <i class="fas fa-chevron-up text-lg"></i>
+        </button>
+        <button id="navDown" title="Slide tiếp theo" class="w-12 h-12 bg-dark hover:bg-primary text-white rounded-full transition-all flex justify-center items-center cursor-pointer shadow-lg hover:translate-y-1">
+            <i class="fas fa-chevron-down text-lg"></i>
+        </button>
+    </div>
+
+    <div id="quiz-modal" class="fixed inset-0 z-[200] custom-modal hidden flex items-center justify-center p-4">
+        <div class="bg-slate-900 border-2 border-emerald-500/60 p-6 md:p-8 rounded-3xl max-w-2xl w-full shadow-2xl relative text-white">
+            <div class="flex justify-between items-center border-b border-emerald-500/20 pb-4 mb-6">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-extrabold text-lg">Trắc Nghiệm Kinh Tế & Hội Nhập</h3>
+                        <p class="text-xs text-emerald-300" id="quiz-subtitle">Hệ thống câu hỏi ôn tập tương tác</p>
+                    </div>
+                </div>
+                <button onclick="closeQuizModal()" class="w-9 h-9 rounded-full bg-white/10 hover:bg-red-500/20 hover:text-red-400 flex items-center justify-center transition">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+
+            <!-- Nội dung trò chơi trắc nghiệm -->
+            <div id="quiz-body">
+                <div id="quiz-intro" class="text-center py-6">
+                    <h4 class="text-2xl font-black mb-3 text-emerald-400">Chinh Phục Thử Thách Hội Nhập</h4>
+                    <p class="text-gray-300 text-sm mb-6">Tham gia trả lời 8 câu hỏi ngẫu nhiên (5 câu dễ, 2 câu trung bình suy luận và 1 câu cực khó). Mỗi câu có 30 giây suy nghĩ.</p>
+                    <button onclick="startQuizGame()" class="px-8 py-3 bg-gradient-to-r from-primary to-teal-400 text-slate-950 font-black rounded-xl shadow-lg hover:scale-105 transition">
+                        BẮT ĐẦU LÀM NGAY <i class="fas fa-play ml-2"></i>
+                    </button>
+                </div>
+
+                <div id="quiz-play-area" class="hidden space-y-5">
+                    <div class="flex justify-between items-center text-xs font-semibold text-emerald-300">
+                        <span id="q-counter">CÂU HỎI 1 / 8</span>
+                        <div class="flex items-center gap-3">
+                            <span id="q-timer" class="bg-amber-500/20 text-amber-300 px-3 py-1 rounded-full"><i class="fas fa-clock mr-1"></i> <span id="time-val">30</span>s</span>
+                            <span id="q-badge" class="bg-emerald-500/20 text-emerald-300 px-3 py-1 rounded-full">Dễ (1.0đ)</span>
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-800 border border-emerald-500/30 p-5 rounded-xl text-center">
+                        <h4 id="q-text" class="text-lg font-bold text-white leading-relaxed">Đang tải...</h4>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                        <button onclick="answerQuiz(0)" id="quiz-ans-0" class="answer-btn p-3.5 text-left text-sm font-semibold text-white flex items-center gap-3">
+                            <span class="w-6 h-6 rounded bg-emerald-950 border border-emerald-500 flex items-center justify-center text-emerald-400 text-xs font-bold shrink-0">A</span>
+                            <span id="quiz-text-0">Đáp án A</span>
+                        </button>
+                        <button onclick="answerQuiz(1)" id="quiz-ans-1" class="answer-btn p-3.5 text-left text-sm font-semibold text-white flex items-center gap-3">
+                            <span class="w-6 h-6 rounded bg-emerald-950 border border-emerald-500 flex items-center justify-center text-emerald-400 text-xs font-bold shrink-0">B</span>
+                            <span id="quiz-text-1">Đáp án B</span>
+                        </button>
+                        <button onclick="answerQuiz(2)" id="quiz-ans-2" class="answer-btn p-3.5 text-left text-sm font-semibold text-white flex items-center gap-3">
+                            <span class="w-6 h-6 rounded bg-emerald-950 border border-emerald-500 flex items-center justify-center text-emerald-400 text-xs font-bold shrink-0">C</span>
+                            <span id="quiz-text-2">Đáp án C</span>
+                        </button>
+                        <button onclick="answerQuiz(3)" id="quiz-ans-3" class="answer-btn p-3.5 text-left text-sm font-semibold text-white flex items-center gap-3">
+                            <span class="w-6 h-6 rounded bg-emerald-950 border border-emerald-500 flex items-center justify-center text-emerald-400 text-xs font-bold shrink-0">D</span>
+                            <span id="quiz-text-3">Đáp án D</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div id="quiz-result-area" class="hidden text-center py-6 space-y-4">
+                    <div class="w-16 h-16 rounded-full bg-emerald-500/20 text-emerald-400 text-3xl flex items-center justify-center mx-auto border border-emerald-500/40">
+                        <i class="fas fa-trophy text-amber-400"></i>
+                    </div>
+                    <h4 class="text-2xl font-black text-white">HOÀN THÀNH BÀI LÀM!</h4>
+                    <p id="quiz-score-summary" class="text-lg text-emerald-200 font-bold">Tổng điểm: 0.0 / 10.0</p>
+                    <button onclick="resetQuizGame()" class="px-8 py-3 bg-gradient-to-r from-primary to-teal-400 text-slate-950 font-black rounded-xl shadow-lg hover:scale-105 transition">
+                        LÀM LẠI BÀI TẬP
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 900, once: true, offset: 100 });
+
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                nav.classList.add('bg-white/95');
+                nav.classList.remove('glass-nav');
+            } else {
+                nav.classList.add('glass-nav');
+                nav.classList.remove('bg-white/95');
+            }
+        });
+
+        // Slider Hình Ảnh
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        let slideInterval;
+
+        function updateSlide() {
+            slides.forEach(slide => slide.classList.remove('active'));
+            slides[currentSlide].classList.add('active');
+        }
+
+        function nextSlideFunc() {
+            currentSlide = (currentSlide + 1) % slides.length;
+            updateSlide();
+            resetInterval();
+        }
+
+        function prevSlideFunc() {
+            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+            updateSlide();
+            resetInterval();
+        }
+
+        function resetInterval() {
+            if (slideInterval) clearInterval(slideInterval);
+            slideInterval = setInterval(nextSlideFunc, 5000); 
+        }
+
+        document.getElementById('btnNext').addEventListener('click', nextSlideFunc);
+        document.getElementById('btnPrev').addEventListener('click', prevSlideFunc);
+        resetInterval();
+
+        // Hệ thống Nút Điều Khiển Thuyết Trình
+        const presentationSections = Array.from(document.querySelectorAll('header, section'));
+        let currentSectionIdx = 0;
+
+        function scrollToSec(index) {
+            if (index >= 0 && index < presentationSections.length) {
+                presentationSections[index].scrollIntoView({ behavior: 'smooth' });
+                currentSectionIdx = index;
+            }
+        }
+
+        document.getElementById('navDown').addEventListener('click', () => {
+            scrollToSec(currentSectionIdx + 1);
+        });
+
+        document.getElementById('navUp').addEventListener('click', () => {
+            scrollToSec(currentSectionIdx - 1);
+        });
+
+        window.addEventListener('scroll', () => {
+            let scrollPosition = window.scrollY + window.innerHeight / 3;
+            presentationSections.forEach((sec, i) => {
+                if (scrollPosition >= sec.offsetTop) {
+                    currentSectionIdx = i;
+                }
+            });
+        });
+
+        // Vòng quay may mắn + Âm thanh "tạch tạch"
+        const students = [
+            { sbd: 1, name: "Bùi Nguyễn Gia Bảo" }, { sbd: 2, name: "Đặng Chí Bình" },
+            { sbd: 3, name: "Đinh Bảo Châu" }, { sbd: 4, name: "Nguyễn Hữu Cường" },
+            { sbd: 5, name: "Ngô Tiến Dũng" }, { sbd: 6, name: "Trương Tuấn Dũng" },
+            { sbd: 7, name: "Trịnh Minh Duy" }, { sbd: 8, name: "Nguyễn Trần Tâm Đan" },
+            { sbd: 9, name: "Lưu Quý Hiệp" }, { sbd: 10, name: "Trần Hòa" },
+            { sbd: 11, name: "Đặng Huy Hoàng" }, { sbd: 12, name: "Hồ Công Hoàng" },
+            { sbd: 13, name: "Lê Công Ngọc Hùng" }, { sbd: 14, name: "Hồ Đức Huy" },
+            { sbd: 15, name: "Lê Quang Huyền" }, { sbd: 16, name: "Hoàng Viết Hưng" },
+            { sbd: 17, name: "Trần Bảo Khang" }, { sbd: 18, name: "Nguyễn Đăng Khánh" },
+            { sbd: 19, name: "Hoàng Nguyễn Trung Kiên" }, { sbd: 20, name: "Phan Tùng Lâm" },
+            { sbd: 21, name: "Phạm Cửu Long" }, { sbd: 22, name: "Nguyễn Ngọc Bảo Minh" },
+            { sbd: 23, name: "Nguyễn Lương Hải Nam" }, { sbd: 24, name: "Nguyễn Thị Quỳnh Như" },
+            { sbd: 25, name: "Lưu Thành Quang" }, { sbd: 26, name: "Lê Đình Quân" },
+            { sbd: 27, name: "Phan Hữu Song" }, { sbd: 28, name: "Nguyễn Thái Sơn" },
+            { sbd: 29, name: "Nguyễn Hữu Thịnh" }, { sbd: 30, name: "Nguyễn Đức Thọ" },
+            { sbd: 31, name: "Nguyễn Chí Thông" }, { sbd: 32, name: "Hoàng Huyền Trang" },
+            { sbd: 33, name: "Đoàn Minh Tùng" }, { sbd: 34, name: "Phạm Phước Tường" },
+            { sbd: 35, name: "Lê Minh Vũ" }
+        ];
+
+        const eligibleStudents = students.filter(s => s.sbd !== 15);
+        let audioCtx = null;
+
+        function initAudio() {
+            if (!audioCtx) {
+                audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+            }
+        }
+
+        function playSound(type) {
+            try {
+                initAudio();
+                if (!audioCtx) return;
+                const now = audioCtx.currentTime;
+                const osc = audioCtx.createOscillator();
+                const gain = audioCtx.createGain();
+                osc.connect(gain);
+                gain.connect(audioCtx.destination);
+
+                if (type === 'tick') {
+                    osc.type = 'sine';
+                    osc.frequency.setValueAtTime(800, now);
+                    osc.frequency.exponentialRampToValueAtTime(400, now + 0.05);
+                    gain.gain.setValueAtTime(0.15, now);
+                    gain.gain.exponentialRampToValueAtTime(0.01, now + 0.05);
+                    osc.start(now);
+                    osc.stop(now + 0.05);
+                } else if (type === 'win') {
+                    const notes = [523.25, 659.25, 783.99, 1046.50];
+                    notes.forEach((freq, idx) => {
+                        const o = audioCtx.createOscillator();
+                        const g = audioCtx.createGain();
+                        o.connect(g);
+                        g.connect(audioCtx.destination);
+                        o.type = 'triangle';
+                        o.frequency.setValueAtTime(freq, now + idx * 0.1);
+                        g.gain.setValueAtTime(0.2, now + idx * 0.1);
+                        g.gain.exponentialRampToValueAtTime(0.01, now + idx * 0.1 + 0.3);
+                        o.start(now + idx * 0.1);
+                        o.stop(now + idx * 0.1 + 0.3);
+                    });
+                } else if (type === 'click') {
+                    osc.frequency.setValueAtTime(600, now);
+                    gain.gain.setValueAtTime(0.1, now);
+                    gain.gain.exponentialRampToValueAtTime(0.01, now + 0.05);
+                    osc.start(now);
+                    osc.stop(now + 0.05);
+                } else if (type === 'correct') {
+                    osc.type = 'triangle';
+                    osc.frequency.setValueAtTime(523.25, now);
+                    osc.frequency.setValueAtTime(659.25, now + 0.1);
+                    osc.frequency.setValueAtTime(783.99, now + 0.2);
+                    gain.gain.setValueAtTime(0.15, now);
+                    gain.gain.exponentialRampToValueAtTime(0.01, now + 0.4);
+                    osc.start(now);
+                    osc.stop(now + 0.4);
+                } else if (type === 'wrong') {
+                    osc.type = 'sawtooth';
+                    osc.frequency.setValueAtTime(200, now);
+                    osc.frequency.setValueAtTime(150, now + 0.15);
+                    gain.gain.setValueAtTime(0.2, now);
+                    gain.gain.exponentialRampToValueAtTime(0.01, now + 0.3);
+                    osc.start(now);
+                    osc.stop(now + 0.3);
+                }
+            } catch (e) {}
+        }
+
+        const btnSpin = document.getElementById('btn-spin');
+        const displaySbd = document.getElementById('lucky-sbd');
+        const displayName = document.getElementById('lucky-name');
+        const startFileContainer = document.getElementById('start-file-container');
+        let spinTimer;
+
+        btnSpin.addEventListener('click', () => {
+            if (btnSpin.disabled) return;
+            initAudio();
+            startFileContainer.classList.add('hidden');
+
+            btnSpin.disabled = true;
+            btnSpin.classList.add('opacity-70', 'cursor-not-allowed');
+            btnSpin.querySelector('span').textContent = 'Đang quay...';
+            btnSpin.querySelector('i').classList.add('fa-spin');
+            
+            displayName.classList.remove('text-accent', 'animate-pulse');
+            displayName.classList.add('text-transparent', 'bg-clip-text', 'bg-gradient-to-r', 'from-green-300', 'to-teal-400');
+
+            let ticks = 0;
+            const maxTicks = 40; 
+            
+            spinTimer = setInterval(() => {
+                const randomVisual = students[Math.floor(Math.random() * students.length)];
+                displaySbd.textContent = `SBD: ${randomVisual.sbd.toString().padStart(2, '0')}`;
+                displayName.textContent = randomVisual.name;
+                playSound('tick');
+                
+                ticks++;
+                if (ticks >= maxTicks) {
+                    clearInterval(spinTimer);
+                    const winner = eligibleStudents[Math.floor(Math.random() * eligibleStudents.length)];
+                    
+                    displaySbd.textContent = `SBD: ${winner.sbd.toString().padStart(2, '0')}`;
+                    displayName.textContent = winner.name;
+                    playSound('win');
+                    
+                    displayName.classList.remove('text-transparent', 'bg-clip-text', 'bg-gradient-to-r', 'from-green-300', 'to-teal-400');
+                    displayName.classList.add('text-accent', 'animate-pulse');
+
+                    startFileContainer.classList.remove('hidden');
+
+                    setTimeout(() => {
+                        btnSpin.disabled = false;
+                        btnSpin.classList.remove('opacity-70', 'cursor-not-allowed');
+                        btnSpin.querySelector('span').textContent = 'Quay Lại Lần Nữa';
+                        btnSpin.querySelector('i').classList.remove('fa-spin');
+                    }, 1000);
+                }
+            }, 60);
+        });
+
+        const bankQuestions = [
+            { q: "Yếu tố địa - kinh tế chiến lược nào đóng vai trò là lợi thế nổi bật giúp tỉnh Quảng Trị mở rộng giao lưu và thu hút đầu tư quốc tế?", options: ["Nằm ở giao điểm trục kinh tế Bắc - Nam và hành lang kinh tế Đông - Tây.", "Sở hữu hoàn toàn các mỏ khoáng sản lớn nhất cả nước.", "Giáp biên giới với tất cả các tỉnh miền Trung.", "Là trung tâm tài chính lớn nhất Đông Nam Á."], correctText: "Nằm ở giao điểm trục kinh tế Bắc - Nam và hành lang kinh tế Đông - Tây.", scoreVal: 1 },
+            { q: "Tuyến giao thông đường bộ quốc tế nào chạy qua Quảng Trị gắn liền với Hành lang kinh tế Đông - Tây (EWEC)?", options: ["Quốc lộ 1A", "Đường Hồ Chí Minh", "Quốc lộ 9", "Đường cao tốc Bắc - Nam"], correctText: "Quốc lộ 9", scoreVal: 1 },
+            { q: "Trong chiến lược phát triển năng lượng sạch để thu hút đầu tư nước ngoài (FDI), Quảng Trị định hướng trở thành trung tâm năng lượng nhờ vào thế mạnh nào ở vùng núi phía Tây?", options: ["Tiềm năng lớn về thủy điện nhỏ", "Tiềm năng lớn về điện gió", "Tiềm năng khai thác than đá", "Tiềm năng điện hạt nhân"], correctText: "Tiềm năng lớn về điện gió", scoreVal: 1 },
+            { q: "Hành lang kinh tế Đông - Tây (EWEC) đi qua cửa khẩu quốc tế nào của tỉnh Quảng Trị, đóng vai trò là huyết mạch lưu thông hàng hóa xuyên biên giới?", options: ["Cửa khẩu Cha Lo", "Cửa khẩu La Lay", "Cửa khẩu quốc tế Lao Bảo", "Cửa khẩu Na Mếu"], correctText: "Cửa khẩu quốc tế Lao Bảo", scoreVal: 1 },
+            { q: "Dự án Khu công nghiệp VSIP tại Quảng Trị là biểu tượng hợp tác kinh tế nổi bật giữa Việt Nam và quốc gia đối tác nào?", options: ["Hàn Quốc", "Nhật Bản", "Singapore", "Thái Lan"], correctText: "Singapore", scoreVal: 1 },
+            { q: "Cụm cảng biển nước sâu nào của Quảng Trị được quy hoạch hướng ra Biển Đông nhằm đón đầu hàng hóa từ Hành lang kinh tế Đông - Tây?", options: ["Cảng Mỹ Thủy", "Cảng Nha Trang", "Cảng Quy Nhơn", "Cảng Hải Phòng"], correctText: "Cảng Mỹ Thủy", scoreVal: 1 },
+            { q: "Hiệp định Thương mại Tự do thế hệ mới mang lại cơ hội lớn nào cho hoạt động xuất khẩu của Quảng Trị?", options: ["Mức cắt giảm thuế quan sâu rộng gần như về 0%", "Được miễn hoàn toàn chi phí vận chuyển quốc tế", "Được hỗ trợ vốn ngân sách trực tiếp từ Liên Hợp Quốc", "Không cần tuân thủ bất kỳ tiêu chuẩn chất lượng nào"], correctText: "Mức cắt giảm thuế quan sâu rộng gần như về 0%", scoreVal: 1 },
+            { q: "Định hướng phát triển du lịch của Quảng Trị trong tiến trình hội nhập gắn liền với thương hiệu nào?", options: ["Du lịch di sản lịch sử - khám phá - độc đáo vươn tầm toàn cầu", "Du lịch sòng bạc giải trí quy mô lớn", "Du lịch mạo hiểm trượt tuyết mùa đông", "Du lịch miệt vườn sông nước miền Tây"], correctText: "Du lịch di sản lịch sử - khám phá - độc đáo vươn tầm toàn cầu", scoreVal: 1 }
+        ];
+
+        let quizQuestions = [];
+        let qIndex = 0;
+        let quizScore = 0;
+        let quizTimer = null;
+        let qTimeLeft = 30;
+
+        function openQuizModal() {
+            playSound('click');
+            document.getElementById('quiz-modal').classList.remove('hidden');
+            resetQuizGame();
+        }
+
+        function closeQuizModal() {
+            playSound('click');
+            clearInterval(quizTimer);
+            document.getElementById('quiz-modal').classList.add('hidden');
+        }
+
+        function startQuizGame() {
+            playSound('click');
+            quizQuestions = [...bankQuestions].sort(() => Math.random() - 0.5);
+            qIndex = 0;
+            quizScore = 0;
+            document.getElementById('quiz-intro').classList.add('hidden');
+            document.getElementById('quiz-result-area').classList.add('hidden');
+            document.getElementById('quiz-play-area').classList.remove('hidden');
+            loadQuizQuestion();
+        }
+
+        function loadQuizQuestion() {
+            clearInterval(quizTimer);
+            qTimeLeft = 30;
+            document.getElementById('time-val').textContent = qTimeLeft;
+
+            const q = quizQuestions[qIndex];
+            document.getElementById('q-counter').textContent = `CÂU HỎI ${qIndex + 1} / ${quizQuestions.length}`;
+            document.getElementById('q-text').textContent = q.q;
+
+            const shuffledOpts = [...q.options].sort(() => Math.random() - 0.5);
+            q.shuffled = shuffledOpts;
+
+            for (let i = 0; i < 4; i++) {
+                const btn = document.getElementById(`quiz-ans-${i}`);
+                btn.disabled = false;
+                btn.className = "answer-btn p-3.5 text-left text-sm font-semibold text-white flex items-center gap-3";
+                document.getElementById(`quiz-text-${i}`).textContent = shuffledOpts[i];
+            }
+
+            quizTimer = setInterval(() => {
+                qTimeLeft--;
+                document.getElementById('time-val').textContent = qTimeLeft;
+                if (qTimeLeft <= 0) {
+                    clearInterval(quizTimer);
+                    handleQuizTimeout();
+                }
+            }, 1000);
+        }
+
+        function handleQuizTimeout() {
+            playSound('wrong');
+            for (let i = 0; i < 4; i++) document.getElementById(`quiz-ans-${i}`).disabled = true;
+            const q = quizQuestions[qIndex];
+            for (let i = 0; i < 4; i++) {
+                if (q.shuffled[i] === q.correctText) {
+                    document.getElementById(`quiz-ans-${i}`).classList.add('correct');
+                    break;
+                }
+            }
+            setTimeout(() => {
+                qIndex++;
+                if (qIndex < quizQuestions.length) loadQuizQuestion();
+                else showQuizResult();
+            }, 1300);
+        }
+
+        function answerQuiz(idx) {
+            playSound('click');
+            clearInterval(quizTimer);
+            for (let i = 0; i < 4; i++) document.getElementById(`quiz-ans-${i}`).disabled = true;
+
+            const q = quizQuestions[qIndex];
+            const chosen = q.shuffled[idx];
+            const chosenBtn = document.getElementById(`quiz-ans-${idx}`);
+            let correctIdx = -1;
+
+            for (let i = 0; i < 4; i++) {
+                if (q.shuffled[i] === q.correctText) {
+                    correctIdx = i;
+                    break;
+                }
+            }
+            const correctBtn = document.getElementById(`quiz-ans-${correctIdx}`);
+
+            if (chosen === q.correctText) {
+                playSound('correct');
+                chosenBtn.classList.add('correct');
+                quizScore += q.scoreVal;
+            } else {
+                playSound('wrong');
+                chosenBtn.classList.add('wrong');
+                if (correctBtn) correctBtn.classList.add('correct');
+            }
+
+            setTimeout(() => {
+                qIndex++;
+                if (qIndex < quizQuestions.length) loadQuizQuestion();
+                else showQuizResult();
+            }, 1300);
+        }
+
+        function showQuizResult() {
+            clearInterval(quizTimer);
+            playSound('win');
+            document.getElementById('quiz-play-area').classList.add('hidden');
+            document.getElementById('quiz-result-area').classList.remove('hidden');
+            document.getElementById('quiz-score-summary').textContent = `Tổng số điểm: ${quizScore.toFixed(1)} / 8.0 điểm`;
+        }
+
+        function resetQuizGame() {
+            clearInterval(quizTimer);
+            document.getElementById('quiz-result-area').classList.add('hidden');
+            document.getElementById('quiz-play-area').classList.add('hidden');
+            document.getElementById('quiz-intro').classList.remove('hidden');
+        }
+    </script>
+</body>
+</html>
