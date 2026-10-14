@@ -10,7 +10,7 @@
     
     <!-- FontAwesome & Google Fonts -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     
     <!-- AOS Animation Library -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -346,7 +346,6 @@
             </div>
             
             <div class="relative w-full h-[550px] rounded-3xl overflow-hidden shadow-2xl border border-white/10 bg-black group">
-                
                 <!-- Slide 1: Suối khoáng nóng Bang Onsen -->
                 <div class="slide active">
                     <img src="https://gonow.com.vn/wp-content/uploads/2025/12/onsen-quang-binh-1.jpg" class="w-full h-full object-cover opacity-50" alt="Suối khoáng nóng Bang Onsen">
@@ -360,7 +359,6 @@
                         </div>
                     </div>
                 </div>
-
                 <!-- Slide 2: KCN Quảng Trị -->
                 <div class="slide">
                     <img src="https://kland.vn/upload/industrypark/industrial_park_khu-cong-nghiep-quang-tri-tinh-quang-tri.jpeg" class="w-full h-full object-cover opacity-50" alt="Khu công nghiệp Quảng Trị">
@@ -374,7 +372,6 @@
                         </div>
                     </div>
                 </div>
-
                 <!-- Slide 3: Sân bay Quảng Trị -->
                 <div class="slide">
                     <img src="https://images2.thanhnien.vn/528068263637045248/2024/7/6/2-phoi-canh-cang-hang-khong-quang-tringoc-duong-1720282032130883707421.jpg" class="w-full h-full object-cover opacity-50" alt="Cảng Hàng Không Quảng Trị">
@@ -388,7 +385,6 @@
                         </div>
                     </div>
                 </div>
-
                 <!-- Slide 4: Ven biển Quảng Trị -->
                 <div class="slide">
                     <img src="https://media.baodautu.vn/Images/ngoctan/2024/10/02/ven_bien_Quang_Tri.jpg" class="w-full h-full object-cover opacity-50" alt="Khu vực ven biển Quảng Trị">
@@ -402,7 +398,6 @@
                         </div>
                     </div>
                 </div>
-
                 <!-- Slide 5: Đảo Cồn Cỏ -->
                 <div class="slide">
                     <img src="https://cdn-images.vtv.vn/thumb_w/1200/2017/conco-1510926291892.jpg" class="w-full h-full object-cover opacity-50" alt="Đảo Cồn Cỏ">
@@ -416,7 +411,6 @@
                         </div>
                     </div>
                 </div>
-
                 <!-- Nút điều khiển Slider -->
                 <button id="btnPrev" class="absolute left-6 top-1/2 -translate-y-1/2 w-14 h-14 bg-white/10 hover:bg-primary text-white rounded-full flex items-center justify-center transition-all z-20 backdrop-blur-md border border-white/20 opacity-0 group-hover:opacity-100 shadow-xl">
                     <i class="fas fa-chevron-left text-xl"></i>
@@ -434,7 +428,6 @@
                 <span class="text-primary font-bold tracking-widest uppercase text-sm mb-2 block">Thành Tựu Nổi Bật</span>
                 <h2 class="text-4xl font-extrabold text-dark mb-4">Tăng Trưởng Hội Nhập Đột Phá</h2>
             </div>
-            
             <div class="flex justify-center" data-aos="fade-up">
                 <div class="bg-white p-3 rounded-3xl shadow-xl border border-gray-100 w-full max-w-4xl transition-transform hover:-translate-y-2 duration-300">
                     <div class="relative w-full aspect-[4/3] overflow-hidden rounded-2xl bg-black">
@@ -469,12 +462,11 @@
                         </div>
                     </div>
 
-                    <button id="btn-spin" class="relative inline-flex items-center justify-center px-8 py-4 text-lg font-bold text-white transition-all duration-300 bg-gradient-to-r from-primary to-teal-500 border border-transparent rounded-full hover:from-green-600 hover:to-teal-600 focus:outline-none shadow-[0_0_20px_rgba(5,150,105,0.4)]">
+                    <button id="btn-spin" class="relative inline-flex items-center justify-center px-8 py-4 text-lg font-bold text-white transition-all duration-300 bg-gradient-to-r from-primary to-teal-500 border border-transparent rounded-full hover:from-green-600 hover:to-teal-600 focus:outline-none shadow-[0_0_20px_rgba(5,150,105,0.4)] cursor-pointer">
                         <i class="fas fa-random mr-3"></i> <span>Quay Chọn Người May Mắn</span>
                     </button>
                 </div>
 
-                <!-- Nút mở hộp thoại trắc nghiệm trực tiếp -->
                 <div id="start-file-container" class="hidden flex flex-col items-center justify-center border-l border-white/10 md:pl-8 w-full md:w-auto" data-aos="fade-left">
                     <p class="text-green-300 text-sm font-semibold mb-3 text-center">🎉 Đã chọn xong người may mắn!</p>
                     <button onclick="openQuizModal()" class="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-amber-500 to-yellow-500 hover:from-amber-600 hover:to-yellow-600 text-slate-950 font-black text-lg rounded-2xl shadow-[0_0_25px_rgba(245,158,11,0.5)] transition-all transform hover:scale-105 cursor-pointer">
@@ -499,44 +491,31 @@
                         Cổng thông tin được thiết kế chuyên nghiệp nhằm cung cấp cái nhìn toàn cảnh và chi tiết nhất về quá trình hội nhập kinh tế quốc tế của tỉnh Quảng Trị. Nền tảng khai thác các khía cạnh trọng điểm từ tiềm năng du lịch, hạ tầng logistics đến các thành tựu thu hút đầu tư FDI nổi bật.
                     </p>
                 </div>
-
                 <div>
                     <h3 class="text-xl font-bold mb-6 text-white border-b border-gray-700 pb-2 inline-block">Liên Hệ Với Chúng Tôi</h3>
                     <ul class="space-y-4">
                         <li class="flex items-center gap-4 text-gray-300 hover:text-white transition-colors">
-                            <div class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center text-primary">
-                                <i class="fas fa-user"></i>
-                            </div>
+                            <div class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center text-primary"><i class="fas fa-user"></i></div>
                             <span class="font-medium">Lê Quang Huyền</span>
                         </li>
                         <li class="flex items-center gap-4 text-gray-300 hover:text-white transition-colors">
-                            <div class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center text-primary">
-                                <i class="fas fa-phone-alt"></i>
-                            </div>
+                            <div class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center text-primary"><i class="fas fa-phone-alt"></i></div>
                             <a href="tel:0342026134" class="font-medium hover:text-primary transition-colors">0342026134</a>
                         </li>
                         <li class="flex items-center gap-4 text-gray-300 hover:text-white transition-colors">
-                            <div class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center text-primary">
-                                <i class="fas fa-envelope"></i>
-                            </div>
+                            <div class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center text-primary"><i class="fas fa-envelope"></i></div>
                             <a href="mailto:lequanghuye@gmail.com" class="font-medium hover:text-primary transition-colors">lequanghuye@gmail.com</a>
                         </li>
                     </ul>
                 </div>
             </div>
-
             <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-500">
                 <p>&copy; 2026 Cổng thông tin Hội nhập Kinh tế Quảng Trị. Phụ trách nội dung: Lê Quang Huyền.</p>
-                <div class="flex space-x-4">
-                    <a href="#" class="w-8 h-8 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary hover:text-white transition-all"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" class="w-8 h-8 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary hover:text-white transition-all"><i class="fab fa-twitter"></i></a>
-                    <a href="#" class="w-8 h-8 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary hover:text-white transition-all"><i class="fab fa-youtube"></i></a>
-                </div>
             </div>
         </div>
     </footer>
 
-    <!-- Nút điều hướng thuyết trình (Lên/Xuống) ở góc phải -->
+    <!-- Nút điều hướng thuyết trình -->
     <div class="fixed right-6 top-1/2 transform -translate-y-1/2 z-[100] flex flex-col gap-4 p-3 bg-white/40 backdrop-blur-md rounded-full border border-white/50 shadow-[0_0_20px_rgba(0,0,0,0.15)]">
         <button id="navUp" title="Slide trước" class="w-12 h-12 bg-dark hover:bg-primary text-white rounded-full transition-all flex justify-center items-center cursor-pointer shadow-lg hover:-translate-y-1">
             <i class="fas fa-chevron-up text-lg"></i>
@@ -546,77 +525,92 @@
         </button>
     </div>
 
-    <!-- Hộp thoại Trắc Nghiệm Tương Tác -->
+    <!-- KHUNG TRÒ CHƠI TRẮC NGHIỆM TÍCH HỢP TỪ TROCHOI.HTML -->
     <div id="quiz-modal" class="fixed inset-0 z-[200] custom-modal hidden flex items-center justify-center p-4">
-        <div class="bg-slate-900 border-2 border-emerald-500/60 p-6 md:p-8 rounded-3xl max-w-2xl w-full shadow-2xl relative text-white">
-            <div class="flex justify-between items-center border-b border-emerald-500/20 pb-4 mb-6">
+        <div class="bg-slate-900 border-2 border-emerald-500/60 p-6 md:p-8 rounded-3xl max-w-3xl w-full max-h-[95vh] overflow-y-auto shadow-2xl relative text-white">
+            
+            <div class="flex justify-between items-center border-b border-emerald-500/20 pb-4 mb-6 sticky top-0 bg-slate-900 z-10">
                 <div class="flex items-center gap-3">
                     <div class="w-10 h-10 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold">
                         <i class="fas fa-graduation-cap"></i>
                     </div>
                     <div>
                         <h3 class="font-extrabold text-lg">Trắc Nghiệm Kinh Tế & Hội Nhập</h3>
-                        <p class="text-xs text-emerald-300" id="quiz-subtitle">Hệ thống câu hỏi ôn tập tương tác</p>
+                        <p class="text-xs text-emerald-300">Hệ thống câu hỏi ôn tập tương tác</p>
                     </div>
                 </div>
-                <button onclick="closeQuizModal()" class="w-9 h-9 rounded-full bg-white/10 hover:bg-red-500/20 hover:text-red-400 flex items-center justify-center transition">
-                    <i class="fas fa-times"></i>
+                <div class="flex items-center gap-4">
+                    <div id="timer-display" class="hidden items-center gap-2 bg-amber-500/10 px-3 py-1.5 rounded-full text-amber-400 font-bold text-sm">
+                        <i class="fas fa-clock"></i> <span id="timer-val">30</span>s
+                    </div>
+                    <div id="score-display" class="hidden items-center gap-2 bg-emerald-500/10 px-3 py-1.5 rounded-full text-emerald-400 font-bold text-sm">
+                        <i class="fas fa-star text-amber-400"></i> <span id="current-score-val">0.0</span> / 10.0
+                    </div>
+                    <button onclick="closeQuizModal()" class="w-9 h-9 rounded-full bg-white/10 hover:bg-red-500/20 hover:text-red-400 flex items-center justify-center transition cursor-pointer">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Màn hình Bắt Đầu Trò Chơi -->
+            <div id="game-intro" class="text-center py-6">
+                <div class="w-24 h-24 mx-auto rounded-full bg-gradient-to-tr from-emerald-500 to-teal-400 p-1 mb-6 shadow-[0_0_30px_rgba(16,185,129,0.3)] animate-pulse">
+                    <div class="w-full h-full bg-slate-950 rounded-full flex items-center justify-center text-emerald-400 text-4xl">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                </div>
+                <h4 class="text-2xl md:text-3xl font-black mb-3 text-emerald-400">Chinh Phục Thử Thách Hội Nhập</h4>
+                <p class="text-gray-300 text-sm mb-8 max-w-lg mx-auto">Tham gia trả lời 8 câu hỏi ngẫu nhiên (5 câu Dễ 1 điểm, 2 câu Trung Bình 1.5 điểm, và 1 câu Cực Khó 2 điểm). Mỗi câu có 30 giây suy nghĩ.</p>
+                <button onclick="initGame()" class="px-8 py-3.5 bg-gradient-to-r from-primary to-teal-400 text-slate-950 font-black rounded-xl shadow-[0_0_20px_rgba(16,185,129,0.4)] hover:scale-105 transition cursor-pointer">
+                    BẮT ĐẦU LÀM NGAY <i class="fas fa-play ml-2"></i>
                 </button>
             </div>
 
-            <!-- Nội dung trò chơi trắc nghiệm -->
-            <div id="quiz-body">
-                <div id="quiz-intro" class="text-center py-6">
-                    <h4 class="text-2xl font-black mb-3 text-emerald-400">Chinh Phục Thử Thách Hội Nhập</h4>
-                    <p class="text-gray-300 text-sm mb-6">Tham gia trả lời 8 câu hỏi ngẫu nhiên. Mỗi câu có 30 giây suy nghĩ. Hệ thống có đầy đủ âm thanh vui nhộn!</p>
-                    <button onclick="startQuizGame()" class="px-8 py-3 bg-gradient-to-r from-primary to-teal-400 text-slate-950 font-black rounded-xl shadow-lg hover:scale-105 transition cursor-pointer">
-                        BẮT ĐẦU LÀM NGAY <i class="fas fa-play ml-2"></i>
+            <!-- Màn hình Trả lời Câu Hỏi -->
+            <div id="game-quiz-area" class="hidden space-y-5">
+                <div class="flex justify-between items-center text-xs font-semibold text-emerald-300">
+                    <span id="question-counter">CÂU HỎI 1 / 8</span>
+                    <span id="question-badge" class="bg-emerald-500/20 px-3 py-1 rounded-full">Dễ (1 điểm)</span>
+                </div>
+                <div class="bg-slate-800 border border-emerald-500/30 p-5 md:p-8 rounded-2xl text-center shadow-inner">
+                    <h4 id="question-text" class="text-lg md:text-xl font-bold text-white leading-relaxed">Đang tải...</h4>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                    <button onclick="selectAnswer(0)" id="ans-0" class="answer-btn p-4 text-left text-sm md:text-base font-semibold text-white flex items-center gap-3 cursor-pointer">
+                        <span class="w-8 h-8 rounded bg-emerald-950 border border-emerald-500 flex items-center justify-center text-emerald-400 font-bold shrink-0">A</span>
+                        <span id="text-0">Đáp án A</span>
+                    </button>
+                    <button onclick="selectAnswer(1)" id="ans-1" class="answer-btn p-4 text-left text-sm md:text-base font-semibold text-white flex items-center gap-3 cursor-pointer">
+                        <span class="w-8 h-8 rounded bg-emerald-950 border border-emerald-500 flex items-center justify-center text-emerald-400 font-bold shrink-0">B</span>
+                        <span id="text-1">Đáp án B</span>
+                    </button>
+                    <button onclick="selectAnswer(2)" id="ans-2" class="answer-btn p-4 text-left text-sm md:text-base font-semibold text-white flex items-center gap-3 cursor-pointer">
+                        <span class="w-8 h-8 rounded bg-emerald-950 border border-emerald-500 flex items-center justify-center text-emerald-400 font-bold shrink-0">C</span>
+                        <span id="text-2">Đáp án C</span>
+                    </button>
+                    <button onclick="selectAnswer(3)" id="ans-3" class="answer-btn p-4 text-left text-sm md:text-base font-semibold text-white flex items-center gap-3 cursor-pointer">
+                        <span class="w-8 h-8 rounded bg-emerald-950 border border-emerald-500 flex items-center justify-center text-emerald-400 font-bold shrink-0">D</span>
+                        <span id="text-3">Đáp án D</span>
                     </button>
                 </div>
+            </div>
 
-                <div id="quiz-play-area" class="hidden space-y-5">
-                    <div class="flex justify-between items-center text-xs font-semibold text-emerald-300">
-                        <span id="q-counter">CÂU HỎI 1 / 8</span>
-                        <div class="flex items-center gap-3">
-                            <span id="q-timer" class="bg-amber-500/20 text-amber-300 px-3 py-1 rounded-full"><i class="fas fa-clock mr-1"></i> <span id="time-val">30</span>s</span>
-                            <span id="q-badge" class="bg-emerald-500/20 text-emerald-300 px-3 py-1 rounded-full">Dễ (1.0đ)</span>
-                        </div>
-                    </div>
-
-                    <div class="bg-slate-800 border border-emerald-500/30 p-5 rounded-xl text-center">
-                        <h4 id="q-text" class="text-lg font-bold text-white leading-relaxed">Đang tải...</h4>
-                    </div>
-
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
-                        <button onclick="answerQuiz(0)" id="quiz-ans-0" class="answer-btn p-3.5 text-left text-sm font-semibold text-white flex items-center gap-3">
-                            <span class="w-6 h-6 rounded bg-emerald-950 border border-emerald-500 flex items-center justify-center text-emerald-400 text-xs font-bold shrink-0">A</span>
-                            <span id="quiz-text-0">Đáp án A</span>
-                        </button>
-                        <button onclick="answerQuiz(1)" id="quiz-ans-1" class="answer-btn p-3.5 text-left text-sm font-semibold text-white flex items-center gap-3">
-                            <span class="w-6 h-6 rounded bg-emerald-950 border border-emerald-500 flex items-center justify-center text-emerald-400 text-xs font-bold shrink-0">B</span>
-                            <span id="quiz-text-1">Đáp án B</span>
-                        </button>
-                        <button onclick="answerQuiz(2)" id="quiz-ans-2" class="answer-btn p-3.5 text-left text-sm font-semibold text-white flex items-center gap-3">
-                            <span class="w-6 h-6 rounded bg-emerald-950 border border-emerald-500 flex items-center justify-center text-emerald-400 text-xs font-bold shrink-0">C</span>
-                            <span id="quiz-text-2">Đáp án C</span>
-                        </button>
-                        <button onclick="answerQuiz(3)" id="quiz-ans-3" class="answer-btn p-3.5 text-left text-sm font-semibold text-white flex items-center gap-3">
-                            <span class="w-6 h-6 rounded bg-emerald-950 border border-emerald-500 flex items-center justify-center text-emerald-400 text-xs font-bold shrink-0">D</span>
-                            <span id="quiz-text-3">Đáp án D</span>
-                        </button>
-                    </div>
+            <!-- Màn hình Kết Quả và Xếp Hạng -->
+            <div id="game-result-area" class="hidden text-center py-6 space-y-5">
+                <div id="rank-icon" class="w-20 h-20 rounded-full bg-emerald-500/20 text-emerald-400 text-4xl flex items-center justify-center mx-auto border border-emerald-500/40">
+                    <i class="fas fa-trophy text-amber-400"></i>
                 </div>
-
-                <div id="quiz-result-area" class="hidden text-center py-6 space-y-4">
-                    <div class="w-16 h-16 rounded-full bg-emerald-500/20 text-emerald-400 text-3xl flex items-center justify-center mx-auto border border-emerald-500/40">
-                        <i class="fas fa-trophy text-amber-400"></i>
-                    </div>
-                    <h4 class="text-2xl font-black text-white">HOÀN THÀNH BÀI LÀM!</h4>
-                    <p id="quiz-score-summary" class="text-lg text-emerald-200 font-bold">Tổng điểm: 0.0 / 8.0</p>
-                    <button onclick="resetQuizGame()" class="px-8 py-3 bg-gradient-to-r from-primary to-teal-400 text-slate-950 font-black rounded-xl shadow-lg hover:scale-105 transition cursor-pointer">
-                        LÀM LẠI BÀI TẬP
-                    </button>
+                <h4 class="text-2xl md:text-3xl font-black text-white">HOÀN THÀNH BÀI LÀM!</h4>
+                <div id="final-score" class="text-lg text-emerald-200"></div>
+                <div>
+                    <p class="text-sm text-gray-400 mb-2">Mức Rank đạt được:</p>
+                    <div id="final-rank"></div>
                 </div>
+                <div id="extra-msg" class="max-w-md mx-auto text-sm mt-4"></div>
+                
+                <button onclick="resetGame()" class="mt-6 px-8 py-3 bg-gradient-to-r from-primary to-teal-400 text-slate-950 font-black rounded-xl shadow-lg hover:scale-105 transition cursor-pointer">
+                    LÀM LẠI BÀI TẬP
+                </button>
             </div>
         </div>
     </div>
@@ -636,96 +630,53 @@
             }
         });
 
-        // Slider Hình Ảnh
+        // 1. Slider Hình Ảnh
         let currentSlide = 0;
         const slides = document.querySelectorAll('.slide');
         let slideInterval;
-
         function updateSlide() {
             slides.forEach(slide => slide.classList.remove('active'));
             slides[currentSlide].classList.add('active');
         }
-
         function nextSlideFunc() {
             currentSlide = (currentSlide + 1) % slides.length;
-            updateSlide();
-            resetInterval();
+            updateSlide(); resetInterval();
         }
-
         function prevSlideFunc() {
             currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-            updateSlide();
-            resetInterval();
+            updateSlide(); resetInterval();
         }
-
         function resetInterval() {
             if (slideInterval) clearInterval(slideInterval);
             slideInterval = setInterval(nextSlideFunc, 5000); 
         }
-
         document.getElementById('btnNext').addEventListener('click', nextSlideFunc);
         document.getElementById('btnPrev').addEventListener('click', prevSlideFunc);
         resetInterval();
 
-        // Hệ thống Nút Điều Khiển Thuyết Trình
+        // 2. Hệ thống Nút Điều Khiển Thuyết Trình
         const presentationSections = Array.from(document.querySelectorAll('header, section'));
         let currentSectionIdx = 0;
-
         function scrollToSec(index) {
             if (index >= 0 && index < presentationSections.length) {
                 presentationSections[index].scrollIntoView({ behavior: 'smooth' });
                 currentSectionIdx = index;
             }
         }
-
-        document.getElementById('navDown').addEventListener('click', () => {
-            scrollToSec(currentSectionIdx + 1);
-        });
-
-        document.getElementById('navUp').addEventListener('click', () => {
-            scrollToSec(currentSectionIdx - 1);
-        });
-
+        document.getElementById('navDown').addEventListener('click', () => scrollToSec(currentSectionIdx + 1));
+        document.getElementById('navUp').addEventListener('click', () => scrollToSec(currentSectionIdx - 1));
         window.addEventListener('scroll', () => {
             let scrollPosition = window.scrollY + window.innerHeight / 3;
             presentationSections.forEach((sec, i) => {
-                if (scrollPosition >= sec.offsetTop) {
-                    currentSectionIdx = i;
-                }
+                if (scrollPosition >= sec.offsetTop) currentSectionIdx = i;
             });
         });
 
-        // Vòng quay may mắn + Âm thanh "tạch tạch"
-        const students = [
-            { sbd: 1, name: "Bùi Nguyễn Gia Bảo" }, { sbd: 2, name: "Đặng Chí Bình" },
-            { sbd: 3, name: "Đinh Bảo Châu" }, { sbd: 4, name: "Nguyễn Hữu Cường" },
-            { sbd: 5, name: "Ngô Tiến Dũng" }, { sbd: 6, name: "Trương Tuấn Dũng" },
-            { sbd: 7, name: "Trịnh Minh Duy" }, { sbd: 8, name: "Nguyễn Trần Tâm Đan" },
-            { sbd: 9, name: "Lưu Quý Hiệp" }, { sbd: 10, name: "Trần Hòa" },
-            { sbd: 11, name: "Đặng Huy Hoàng" }, { sbd: 12, name: "Hồ Công Hoàng" },
-            { sbd: 13, name: "Lê Công Ngọc Hùng" }, { sbd: 14, name: "Hồ Đức Huy" },
-            { sbd: 15, name: "Lê Quang Huyền" }, { sbd: 16, name: "Hoàng Viết Hưng" },
-            { sbd: 17, name: "Trần Bảo Khang" }, { sbd: 18, name: "Nguyễn Đăng Khánh" },
-            { sbd: 19, name: "Hoàng Nguyễn Trung Kiên" }, { sbd: 20, name: "Phan Tùng Lâm" },
-            { sbd: 21, name: "Phạm Cửu Long" }, { sbd: 22, name: "Nguyễn Ngọc Bảo Minh" },
-            { sbd: 23, name: "Nguyễn Lương Hải Nam" }, { sbd: 24, name: "Nguyễn Thị Quỳnh Như" },
-            { sbd: 25, name: "Lưu Thành Quang" }, { sbd: 26, name: "Lê Đình Quân" },
-            { sbd: 27, name: "Phan Hữu Song" }, { sbd: 28, name: "Nguyễn Thái Sơn" },
-            { sbd: 29, name: "Nguyễn Hữu Thịnh" }, { sbd: 30, name: "Nguyễn Đức Thọ" },
-            { sbd: 31, name: "Nguyễn Chí Thông" }, { sbd: 32, name: "Hoàng Huyền Trang" },
-            { sbd: 33, name: "Đoàn Minh Tùng" }, { sbd: 34, name: "Phạm Phước Tường" },
-            { sbd: 35, name: "Lê Minh Vũ" }
-        ];
-
-        const eligibleStudents = students.filter(s => s.sbd !== 15);
+        // 3. Hệ Thống Âm Thanh (Dùng chung cho Vòng Quay & Trắc Nghiệm)
         let audioCtx = null;
-
         function initAudio() {
-            if (!audioCtx) {
-                audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-            }
+            if (!audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)();
         }
-
         function playSound(type) {
             try {
                 initAudio();
@@ -742,28 +693,23 @@
                     osc.frequency.exponentialRampToValueAtTime(400, now + 0.05);
                     gain.gain.setValueAtTime(0.15, now);
                     gain.gain.exponentialRampToValueAtTime(0.01, now + 0.05);
-                    osc.start(now);
-                    osc.stop(now + 0.05);
+                    osc.start(now); osc.stop(now + 0.05);
                 } else if (type === 'win') {
                     const notes = [523.25, 659.25, 783.99, 1046.50];
                     notes.forEach((freq, idx) => {
-                        const o = audioCtx.createOscillator();
-                        const g = audioCtx.createGain();
-                        o.connect(g);
-                        g.connect(audioCtx.destination);
+                        const o = audioCtx.createOscillator(); const g = audioCtx.createGain();
+                        o.connect(g); g.connect(audioCtx.destination);
                         o.type = 'triangle';
                         o.frequency.setValueAtTime(freq, now + idx * 0.1);
                         g.gain.setValueAtTime(0.2, now + idx * 0.1);
                         g.gain.exponentialRampToValueAtTime(0.01, now + idx * 0.1 + 0.3);
-                        o.start(now + idx * 0.1);
-                        o.stop(now + idx * 0.1 + 0.3);
+                        o.start(now + idx * 0.1); o.stop(now + idx * 0.1 + 0.3);
                     });
                 } else if (type === 'click') {
                     osc.frequency.setValueAtTime(600, now);
                     gain.gain.setValueAtTime(0.1, now);
                     gain.gain.exponentialRampToValueAtTime(0.01, now + 0.05);
-                    osc.start(now);
-                    osc.stop(now + 0.05);
+                    osc.start(now); osc.stop(now + 0.05);
                 } else if (type === 'correct') {
                     osc.type = 'triangle';
                     osc.frequency.setValueAtTime(523.25, now);
@@ -771,20 +717,34 @@
                     osc.frequency.setValueAtTime(783.99, now + 0.2);
                     gain.gain.setValueAtTime(0.15, now);
                     gain.gain.exponentialRampToValueAtTime(0.01, now + 0.4);
-                    osc.start(now);
-                    osc.stop(now + 0.4);
+                    osc.start(now); osc.stop(now + 0.4);
                 } else if (type === 'wrong') {
                     osc.type = 'sawtooth';
                     osc.frequency.setValueAtTime(200, now);
                     osc.frequency.setValueAtTime(150, now + 0.15);
                     gain.gain.setValueAtTime(0.2, now);
                     gain.gain.exponentialRampToValueAtTime(0.01, now + 0.3);
-                    osc.start(now);
-                    osc.stop(now + 0.3);
+                    osc.start(now); osc.stop(now + 0.3);
                 }
             } catch (e) {}
         }
 
+        // 4. Vòng quay may mắn
+        const students = [
+            { sbd: 1, name: "Bùi Nguyễn Gia Bảo" }, { sbd: 2, name: "Đặng Chí Bình" }, { sbd: 3, name: "Đinh Bảo Châu" }, 
+            { sbd: 4, name: "Nguyễn Hữu Cường" }, { sbd: 5, name: "Ngô Tiến Dũng" }, { sbd: 6, name: "Trương Tuấn Dũng" },
+            { sbd: 7, name: "Trịnh Minh Duy" }, { sbd: 8, name: "Nguyễn Trần Tâm Đan" }, { sbd: 9, name: "Lưu Quý Hiệp" }, 
+            { sbd: 10, name: "Trần Hòa" }, { sbd: 11, name: "Đặng Huy Hoàng" }, { sbd: 12, name: "Hồ Công Hoàng" },
+            { sbd: 13, name: "Lê Công Ngọc Hùng" }, { sbd: 14, name: "Hồ Đức Huy" }, { sbd: 15, name: "Lê Quang Huyền" }, 
+            { sbd: 16, name: "Hoàng Viết Hưng" }, { sbd: 17, name: "Trần Bảo Khang" }, { sbd: 18, name: "Nguyễn Đăng Khánh" },
+            { sbd: 19, name: "Hoàng Nguyễn Trung Kiên" }, { sbd: 20, name: "Phan Tùng Lâm" }, { sbd: 21, name: "Phạm Cửu Long" }, 
+            { sbd: 22, name: "Nguyễn Ngọc Bảo Minh" }, { sbd: 23, name: "Nguyễn Lương Hải Nam" }, { sbd: 24, name: "Nguyễn Thị Quỳnh Như" },
+            { sbd: 25, name: "Lưu Thành Quang" }, { sbd: 26, name: "Lê Đình Quân" }, { sbd: 27, name: "Phan Hữu Song" }, 
+            { sbd: 28, name: "Nguyễn Thái Sơn" }, { sbd: 29, name: "Nguyễn Hữu Thịnh" }, { sbd: 30, name: "Nguyễn Đức Thọ" },
+            { sbd: 31, name: "Nguyễn Chí Thông" }, { sbd: 32, name: "Hoàng Huyền Trang" }, { sbd: 33, name: "Đoàn Minh Tùng" }, 
+            { sbd: 34, name: "Phạm Phước Tường" }, { sbd: 35, name: "Lê Minh Vũ" }
+        ];
+        const eligibleStudents = students.filter(s => s.sbd !== 15);
         const btnSpin = document.getElementById('btn-spin');
         const displaySbd = document.getElementById('lucky-sbd');
         const displayName = document.getElementById('lucky-name');
@@ -793,20 +753,13 @@
 
         btnSpin.addEventListener('click', () => {
             if (btnSpin.disabled) return;
-            initAudio();
-            startFileContainer.classList.add('hidden');
-
-            btnSpin.disabled = true;
-            btnSpin.classList.add('opacity-70', 'cursor-not-allowed');
-            btnSpin.querySelector('span').textContent = 'Đang quay...';
-            btnSpin.querySelector('i').classList.add('fa-spin');
-            
+            initAudio(); startFileContainer.classList.add('hidden');
+            btnSpin.disabled = true; btnSpin.classList.add('opacity-70', 'cursor-not-allowed');
+            btnSpin.querySelector('span').textContent = 'Đang quay...'; btnSpin.querySelector('i').classList.add('fa-spin');
             displayName.classList.remove('text-accent', 'animate-pulse');
             displayName.classList.add('text-transparent', 'bg-clip-text', 'bg-gradient-to-r', 'from-green-300', 'to-teal-400');
 
             let ticks = 0;
-            const maxTicks = 40; 
-            
             spinTimer = setInterval(() => {
                 const randomVisual = students[Math.floor(Math.random() * students.length)];
                 displaySbd.textContent = `SBD: ${randomVisual.sbd.toString().padStart(2, '0')}`;
@@ -814,30 +767,27 @@
                 playSound('tick');
                 
                 ticks++;
-                if (ticks >= maxTicks) {
+                if (ticks >= 40) {
                     clearInterval(spinTimer);
                     const winner = eligibleStudents[Math.floor(Math.random() * eligibleStudents.length)];
-                    
                     displaySbd.textContent = `SBD: ${winner.sbd.toString().padStart(2, '0')}`;
                     displayName.textContent = winner.name;
                     playSound('win');
                     
                     displayName.classList.remove('text-transparent', 'bg-clip-text', 'bg-gradient-to-r', 'from-green-300', 'to-teal-400');
                     displayName.classList.add('text-accent', 'animate-pulse');
-
                     startFileContainer.classList.remove('hidden');
 
                     setTimeout(() => {
-                        btnSpin.disabled = false;
-                        btnSpin.classList.remove('opacity-70', 'cursor-not-allowed');
-                        btnSpin.querySelector('span').textContent = 'Quay Lại Lần Nữa';
-                        btnSpin.querySelector('i').classList.remove('fa-spin');
+                        btnSpin.disabled = false; btnSpin.classList.remove('opacity-70', 'cursor-not-allowed');
+                        btnSpin.querySelector('span').textContent = 'Quay Lại Lần Nữa'; btnSpin.querySelector('i').classList.remove('fa-spin');
                     }, 1000);
                 }
             }, 60);
         });
 
-        const bankQuestions = [
+        // 5. TRÒ CHƠI TRẮC NGHIỆM (Code ghép từ trochoi.html)
+        const bankEasy = [
             { q: "Yếu tố địa - kinh tế chiến lược nào đóng vai trò là lợi thế nổi bật giúp tỉnh Quảng Trị mở rộng giao lưu và thu hút đầu tư quốc tế?", options: ["Nằm ở giao điểm trục kinh tế Bắc - Nam và hành lang kinh tế Đông - Tây.", "Sở hữu hoàn toàn các mỏ khoáng sản lớn nhất cả nước.", "Giáp biên giới với tất cả các tỉnh miền Trung.", "Là trung tâm tài chính lớn nhất Đông Nam Á."], correctText: "Nằm ở giao điểm trục kinh tế Bắc - Nam và hành lang kinh tế Đông - Tây.", scoreVal: 1 },
             { q: "Tuyến giao thông đường bộ quốc tế nào chạy qua Quảng Trị gắn liền với Hành lang kinh tế Đông - Tây (EWEC)?", options: ["Quốc lộ 1A", "Đường Hồ Chí Minh", "Quốc lộ 9", "Đường cao tốc Bắc - Nam"], correctText: "Quốc lộ 9", scoreVal: 1 },
             { q: "Trong chiến lược phát triển năng lượng sạch để thu hút đầu tư nước ngoài (FDI), Quảng Trị định hướng trở thành trung tâm năng lượng nhờ vào thế mạnh nào ở vùng núi phía Tây?", options: ["Tiềm năng lớn về thủy điện nhỏ", "Tiềm năng lớn về điện gió", "Tiềm năng khai thác than đá", "Tiềm năng điện hạt nhân"], correctText: "Tiềm năng lớn về điện gió", scoreVal: 1 },
@@ -845,132 +795,261 @@
             { q: "Dự án Khu công nghiệp VSIP tại Quảng Trị là biểu tượng hợp tác kinh tế nổi bật giữa Việt Nam và quốc gia đối tác nào?", options: ["Hàn Quốc", "Nhật Bản", "Singapore", "Thái Lan"], correctText: "Singapore", scoreVal: 1 },
             { q: "Cụm cảng biển nước sâu nào của Quảng Trị được quy hoạch hướng ra Biển Đông nhằm đón đầu hàng hóa từ Hành lang kinh tế Đông - Tây?", options: ["Cảng Mỹ Thủy", "Cảng Nha Trang", "Cảng Quy Nhơn", "Cảng Hải Phòng"], correctText: "Cảng Mỹ Thủy", scoreVal: 1 },
             { q: "Hiệp định Thương mại Tự do thế hệ mới mang lại cơ hội lớn nào cho hoạt động xuất khẩu của Quảng Trị?", options: ["Mức cắt giảm thuế quan sâu rộng gần như về 0%", "Được miễn hoàn toàn chi phí vận chuyển quốc tế", "Được hỗ trợ vốn ngân sách trực tiếp từ Liên Hợp Quốc", "Không cần tuân thủ bất kỳ tiêu chuẩn chất lượng nào"], correctText: "Mức cắt giảm thuế quan sâu rộng gần như về 0%", scoreVal: 1 },
-            { q: "Định hướng phát triển du lịch của Quảng Trị trong tiến trình hội nhập gắn liền với thương hiệu nào?", options: ["Du lịch di sản lịch sử - khám phá - độc đáo vươn tầm toàn cầu", "Du lịch sòng bạc giải trí quy mô lớn", "Du lịch mạo hiểm trượt tuyết mùa đông", "Du lịch miệt vườn sông nước miền Tây"], correctText: "Du lịch di sản lịch sử - khám phá - độc đáo vươn tầm toàn cầu", scoreVal: 1 }
+            { q: "Định hướng phát triển du lịch của Quảng Trị trong tiến trình hội nhập gắn liền với thương hiệu nào?", options: ["Du lịch di sản lịch sử - khám phá - độc đáo vươn tầm toàn cầu", "Du lịch sòng bạc giải trí quy mô lớn", "Du lịch mạo hiểm trượt tuyết mùa đông", "Du lịch miệt vườn sông nước miền Tây"], correctText: "Du lịch di sản lịch sử - khám phá - độc đáo vươn tầm toàn cầu", scoreVal: 1 },
+            { q: "Loại hình giao thông nào được đầu tư xây dựng mới nhằm phá vỡ thế độc đạo và kết nối hàng không của Quảng Trị với thế giới?", options: ["Cảng hàng không (Sân bay) Quảng Trị", "Đường sắt cao tốc xuyên Á", "Hệ thống cáp treo vượt biển", "Kênh đào xuyên tỉnh"], correctText: "Cảng hàng không (Sân bay) Quảng Trị", scoreVal: 1 },
+            { q: "Khu kinh tế ven biển nào đóng vai trò là động lực tăng trưởng kinh tế trọng điểm của tỉnh Quảng Trị?", options: ["Khu kinh tế Đông Nam Quảng Trị", "Khu kinh tế Vân Phong", "Khu kinh tế Vũng Áng", "Khu kinh tế Chu Lai"], correctText: "Khu kinh tế Đông Nam Quảng Trị", scoreVal: 1 },
+            { q: "Đối tác thương mại quan trọng nằm ngay phía Tây giáp biên giới với Quảng Trị trong giao lưu kinh tế tiểu vùng là quốc gia nào?", options: ["Lào", "Campuchia", "Trung Quốc", "Myanmar"], correctText: "Lào", scoreVal: 1 },
+            { q: "Sản phẩm nông nghiệp đặc sản nào của Quảng Trị đang được đẩy mạnh xuất khẩu chính ngạch sang thị trường quốc tế nhờ tiêu chuẩn VietGAP/GlobalGAP?", options: ["Hồ tiêu, cà phê Khe Sanh và lúa gạo chất lượng cao", "Cây cao su lấy mủ thô", "Cây ăn quả ôn đới", "Lúa mì và ngô ngọt"], correctText: "Hồ tiêu, cà phê Khe Sanh và lúa gạo chất lượng cao", scoreVal: 1 },
+            { q: "Trong tiến trình hội nhập, yếu tố nào được tỉnh xác định là chìa khóa then chốt để nâng cao năng lực cạnh tranh doanh nghiệp?", options: ["Chuyển đổi số, cải cách hành chính và hải quan điện tử", "Tăng số lượng lao động phổ thông thủ công", "Giảm tối đa chi tiêu cho giáo dục", "Dừng hợp tác với các tỉnh lân cận"], correctText: "Chuyển đổi số, cải cách hành chính và hải quan điện tử", scoreVal: 1 },
+            { q: "Tuyến đường hành lang kinh tế Đông - Tây kết nối điểm khởi đầu từ đâu đến các cảng biển của Quảng Trị?", options: ["Từ các nước tiểu vùng sông Mê Kông qua biên giới Lào vào Quảng Trị", "Từ miền Bắc Trung Quốc xuyên qua vịnh Bắc Bộ", "Từ thủ đô các nước Nam Á", "Từ các tỉnh phía Nam nước ta"], correctText: "Từ các nước tiểu vùng sông Mê Kông qua biên giới Lào vào Quảng Trị", scoreVal: 1 },
+            { q: "Hệ thống cơ sở hạ tầng logistics hiện đại tại các cửa khẩu quốc tế giúp Quảng Trị đạt được mục tiêu gì?", options: ["Rút ngắn thời gian thông quan, giảm chi phí vận tải cho doanh nghiệp", "Tăng thêm thuế phí cho người dân qua lại", "Kéo dài thời gian kiểm tra hàng hóa", "Hạn chế hoàn toàn xe tải nước ngoài"], correctText: "Rút ngắn thời gian thông quan, giảm chi phí vận tải cho doanh nghiệp", scoreVal: 1 },
+            { q: "Tiềm năng phát triển du lịch biển đảo nổi tiếng nào của Quảng Trị thu hút du khách trong và ngoài nước?", options: ["Đảo Cồn Cỏ và dải bờ biển cát trắng trải dài", "Quần đảo Trường Sa", "Quần đảo Hoàng Sa", "Vịnh Hạ Long"], correctText: "Đảo Cồn Cỏ và dải bờ biển cát trắng trải dài", scoreVal: 1 },
+            { q: "Việc tham gia sâu vào các chuỗi giá trị toàn cầu đòi hỏi lực lượng lao động Quảng Trị phải như thế nào?", options: ["Được đào tạo nghề chuyên sâu, có tay nghề và kỹ năng công nghệ", "Chỉ cần sức khỏe tốt không cần bằng cấp", "Chỉ làm việc thủ công truyền thống", "Không cần biết ngoại ngữ hay tin học"], correctText: "Được đào tạo nghề chuyên sâu, có tay nghề và kỹ năng công nghệ", scoreVal: 1 },
+            { q: "Chính sách 'trải thảm đỏ' thu hút đầu tư nước ngoài (FDI) của Quảng Trị thể hiện qua điều gì?", options: ["Cải thiện môi trường đầu tư, hỗ trợ thủ tục nhanh chóng và ưu đãi đất đai", "Tăng thuế gấp đôi đối với nhà đầu tư mới", "Bắt buộc nhà đầu tư tự làm đường giao thông", "Hạn chế tiếp xúc với các đoàn doanh nghiệp quốc tế"], correctText: "Cải thiện môi trường đầu tư, hỗ trợ thủ tục nhanh chóng và ưu đãi đất đai", scoreVal: 1 },
+            { q: "Ngành công nghiệp nào đang tận dụng cực tốt lợi thế khí hậu gió lớn tại vùng gò đồi huyện Hướng Hóa?", options: ["Công nghiệp năng lượng điện gió", "Công nghiệp khai thác dầu mỏ", "Công nghiệp luyện kim màu", "Công nghiệp đóng tàu biển cỡ lớn"], correctText: "Công nghiệp năng lượng điện gió", scoreVal: 1 },
+            { q: "Việc mở rộng quan hệ đối ngoại và ngoại giao kinh tế của Quảng Trị nhằm mục đích chính là gì?", options: ["Thu hút vốn, công nghệ, mở rộng thị trường xuất khẩu và thúc đẩy phát triển", "Cô lập nền kinh tế địa phương với bên ngoài", "Chỉ buôn bán nội bộ trong tỉnh", "Chấm dứt các hoạt động xuất khẩu"], correctText: "Thu hút vốn, công nghệ, mở rộng thị trường xuất khẩu và thúc đẩy phát triển", scoreVal: 1 },
+            { q: "Đặc điểm khí hậu nào của Quảng Trị thường gây thách thức lớn cho sản xuất nông nghiệp và cơ sở hạ tầng?", options: ["Nắng nóng gay gắt (gió Lào) và mùa mưa bão, lũ lụt", "Khí hậu ôn đới quanh năm lạnh giá", "Tuyết rơi dày vào mùa đông", "Không có mưa suốt 10 năm liền"], correctText: "Nắng nóng gay gắt (gió Lào) và mùa mưa bão, lũ lụt", scoreVal: 1 },
+            { q: "Mô hình hợp tác kinh tế song phương và đa phương giúp Quảng Trị tận dụng nguồn lực nào từ bên ngoài?", options: ["Vốn đầu tư trực tiếp nước ngoài (FDI) và kinh nghiệm quản lý tiên tiến", "Chỉ nhận viện trợ lương thực cứu trợ", "Nguồn lao động di cư tự do không kiểm soát", "Vật liệu xây dựng cũ từ nước ngoài"], correctText: "Vốn đầu tư trực tiếp nước ngoài (FDI) và kinh nghiệm quản lý tiên tiến", scoreVal: 1 },
+            { q: "Trong định hướng phát triển du lịch, Quảng Trị kết hợp yếu tố lịch sử chiến tranh với loại hình du lịch nào để thu hút khách quốc tế?", options: ["Du lịch về nguồn, khám phá thiên nhiên và tìm hiểu văn hóa bản địa", "Du lịch sòng bạc trực tuyến", "Du lịch không gian vũ trụ", "Du lịch trượt tuyết mạo hiểm"], correctText: "Du lịch về nguồn, khám phá thiên nhiên và tìm hiểu văn hóa bản địa", scoreVal: 1 },
+            { q: "Các khu công nghiệp tập trung trên địa bàn Quảng Trị được quy hoạch gắn liền với yếu tố gì để đảm bảo phát triển bền vững?", options: ["Hệ thống xử lý môi trường chuẩn mực và kết nối giao thông thuận tiện", "Nằm sâu trong khu dân cư đông đúc", "Không cần hệ thống xử lý rác thải", "Cách xa hoàn toàn nguồn điện và nước"], correctText: "Hệ thống xử lý môi trường chuẩn mực và kết nối giao thông thuận tiện", scoreVal: 1 },
+            { q: "Tầm nhìn chiến lược trong quá trình hội nhập kinh tế của tỉnh Quảng Trị là phấn đấu trở thành gì?", options: ["Cầu nối giao thương năng động, trung tâm năng lượng và logistics của khu vực", "Tỉnh thuần nông lạc hậu", "Khu vực phi thuế quan biệt lập hoàn toàn", "Thành phố trực thuộc trung ương lớn nhất miền Nam"], correctText: "Cầu nối giao thương năng động, trung tâm năng lượng và logistics của khu vực", scoreVal: 1 },
+            { q: "Hoạt động xuất nhập khẩu qua các cửa khẩu quốc tế ở Quảng Trị đóng vai trò gì đối với ngân sách tỉnh?", options: ["Tạo nguồn thu quan trọng từ thuế xuất nhập khẩu và dịch vụ logistics", "Không mang lại nguồn thu nào", "Làm suy yếu nền kinh tế địa phương", "Chỉ phục vụ mục đích từ thiện"], correctText: "Tạo nguồn thu quan trọng từ thuế xuất nhập khẩu và dịch vụ logistics", scoreVal: 1 },
+            { q: "Việc phát triển kinh tế biên mậu tại Lao Bảo mang lại lợi ích thiết thực gì cho cư dân vùng biên giới?", options: ["Tạo việc làm, nâng cao thu nhập và thúc đẩy giao thương hàng hóa", "Gây chia rẽ tình đoàn kết nhân dân hai nước", "Làm giảm giá trị đồng tiền nội địa", "Ngăn cấm người dân qua lại thăm thân"], correctText: "Tạo việc làm, nâng cao thu nhập và thúc đẩy giao thương hàng hóa", scoreVal: 1 },
+            { q: "Chương trình mỗi xã một sản phẩm (OCOP) tại Quảng Trị trong tiến trình hội nhập hướng tới điều gì?", options: ["Chuẩn hóa chất lượng nông đặc sản để vươn tầm thị trường lớn", "Tiêu thụ nội bộ trong phạm vi hẹp của xã", "Ngừng sản xuất các mặt hàng thủ công", "Giảm giá trị thương hiệu địa phương"], correctText: "Chuẩn hóa chất lượng nông đặc sản để vươn tầm thị trường lớn", scoreVal: 1 },
+            { q: "Để nâng cao chất lượng thu hút đầu tư, lãnh đạo tỉnh Quảng Trị luôn chú trọng đến việc gì?", options: ["Đối thoại, lắng nghe và tháo gỡ khó khăn kịp thời cho doanh nghiệp", "Tăng thêm các thủ tục giấy tờ rườm rà", "Tránh gặp gỡ các nhà đầu tư nước ngoài", "Đóng cửa các văn phòng xúc tiến thương mại"], correctText: "Đối thoại, lắng nghe và tháo gỡ khó khăn kịp thời cho doanh nghiệp", scoreVal: 1 },
+            { q: "Sự kiện hội nhập quốc tế lớn nào thường xuyên được Quảng Trị phối hợp tổ chức nhằm quảng bá hình ảnh địa phương?", options: ["Các diễn đàn xúc tiến đầu tư, hội chợ thương mại quốc tế hành lang EWEC", "Giải vô địch đua xe Công thức 1", "Cuộc thi hoa hậu thế giới", "Hội nghị thượng đỉnh G20"], correctText: "Các diễn đàn xúc tiến đầu tư, hội chợ thương mại quốc tế hành lang EWEC", scoreVal: 1 }
         ];
 
-        let quizQuestions = [];
-        let qIndex = 0;
-        let quizScore = 0;
-        let quizTimer = null;
-        let qTimeLeft = 30;
+        const bankMedium = [
+            { q: "Thách thức lớn về điều kiện tự nhiên thường xuyên gây trở ngại cho cơ sở hạ tầng và chuỗi cung ứng logistics tại Quảng Trị được đề cập trong bài là gì?", options: ["Động đất thường xuyên xảy ra quanh năm.", "Thiên tai như bão, lũ lụt, ngập úng ở đồng bằng và sạt lở ở miền núi.", "Tình trạng khô hạn kéo dài quanh năm không có nguồn nước.", "Nền địa chất yếu không thể xây dựng nhà cao tầng."], correctText: "Thiên tai như bão, lũ lụt, ngập úng ở đồng bằng và sạt lở ở miền núi.", scoreVal: 1.5 },
+            { q: "Hệ sinh thái Logistics tại Quảng Trị được củng cố và tối ưu hóa thời gian thông quan hàng hóa xuyên biên giới chủ yếu nhờ vào yếu tố nào?", options: ["Hệ thống vệ tinh định vị toàn cầu lắp trên xe container.", "Hải quan điện tử theo cơ chế một cửa quốc gia và quốc tế.", "Trí tuệ nhân tạo điều phối luồng xe tại cửa khẩu.", "Hệ thống thanh toán tiền mặt tự động đa quốc gia."], correctText: "Hải quan điện tử theo cơ chế một cửa quốc gia và quốc tế.", scoreVal: 1.5 },
+            { q: "Áp lực lớn nhất đặt ra cho các doanh nghiệp vừa và nhỏ tại Quảng Trị khi tham gia vào chuỗi giá trị toàn cầu trong quá trình hội nhập là gì?", options: ["Cạnh tranh gay gắt về chất lượng sản phẩm, tiêu chuẩn quốc tế và năng lực công nghệ.", "Thiếu hụt hoàn toàn nguồn lao động phổ thông.", "Không có địa điểm để mở cửa hàng trưng bày.", "Quy định cấm xuất khẩu mọi mặt hàng nông sản."], correctText: "Cạnh tranh gay gắt về chất lượng sản phẩm, tiêu chuẩn quốc tế và năng lực công nghệ.", scoreVal: 1.5 },
+            { q: "Việc tỉnh Quảng Trị tận dụng khí hậu khắc nghiệt (nắng nóng và gió Tây Nam lớn) để phát triển mạnh mẽ các dự án năng lượng tái tạo tại vùng núi phía Tây (Hướng Hóa) phản ánh đặc điểm nào trong quá trình hội nhập quốc tế?", options: ["Khả năng chuyển hóa thách thức tự nhiên thành lợi thế cạnh tranh chiến lược và đón đầu xu hướng công nghệ xanh toàn cầu.", "Sự phụ thuộc hoàn toàn vào nguồn năng lượng nhập khẩu từ nước ngoài.", "Việc từ bỏ các ngành kinh tế truyền thống để tập trung duy nhất vào điện gió.", "Sự suy giảm nghiêm trọng của hệ sinh thái rừng phòng hộ."], correctText: "Khả năng chuyển hóa thách thức tự nhiên thành lợi thế cạnh tranh chiến lược và đón đầu xu hướng công nghệ xanh toàn cầu.", scoreVal: 1.5 },
+            { q: "Trong định hướng phát triển kinh tế đối ngoại và hội nhập quốc tế, tỉnh Quảng Trị xác định trụ cột nào là khâu đột phá để thu hút nguồn lực phát triển công nghiệp và dịch vụ?", options: ["Thu hút vốn đầu tư trực tiếp nước ngoài (FDI) và phát triển hạ tầng logistics.", "Chỉ tập trung vào khai thác khoáng sản thô.", "Phát triển độc lập không cần giao thương với bên ngoài.", "Đẩy mạnh sản xuất nông nghiệp tự cung tự cấp."], correctText: "Thu hút vốn đầu tư trực tiếp nước ngoài (FDI) và phát triển hạ tầng logistics.", scoreVal: 1.5 },
+            { q: "Yếu tố nào về nguồn nhân lực tại Quảng Trị cần được tiếp tục cải thiện để đáp ứng yêu cầu khắt khe của các doanh nghiệp FDI trong bối cảnh hội nhập?", options: ["Tỷ lệ lao động qua đào tạo và có bằng cấp, chứng chỉ kỹ thuật, ngoại ngữ.", "Số lượng lao động không biết chữ.", "Khả năng làm việc nông nghiệp truyền thống.", "Thể lực lao động chân tay phổ thông."], correctText: "Tỷ lệ lao động qua đào tạo và có bằng cấp, chứng chỉ kỹ thuật, ngoại ngữ.", scoreVal: 1.5 },
+            { q: "Việc đẩy mạnh ngoại giao kinh tế và mở rộng quan hệ hợp tác toàn diện với các địa phương nước ngoài (như Lào, Thái Lan, Hàn Quốc...) giúp Quảng Trị đạt được mục tiêu chiến lược nào?", options: ["Tạo động lực bứt phá tăng trưởng kinh tế và nâng tầm vị thế trong dòng chảy hội nhập quốc tế.", "Cô lập thương mại với các nước láng giềng.", "Chỉ tập trung vay vốn ODA để trả nợ công.", "Giảm sút kim ngạch xuất nhập khẩu."], correctText: "Tạo động lực bứt phá tăng trưởng kinh tế và nâng tầm vị thế trong dòng chảy hội nhập quốc tế.", scoreVal: 1.5 },
+            { q: "Cơ hội lớn nào mang lại từ các Hiệp định Thương mại Tự do (FTA) thế hệ mới đối với quá trình hội nhập kinh tế của tỉnh Quảng Trị?", options: ["Mức cắt giảm thuế quan gần như về 0%, thúc đẩy xuất khẩu và thu hút đầu tư.", "Được miễn toàn bộ nghĩa vụ thuế nội địa cho người dân.", "Được quyền tự in tiền tệ giao dịch quốc tế.", "Không cần tuân thủ các quy tắc xuất xứ hàng hóa."], correctText: "Mức cắt giảm thuế quan gần như về 0%, thúc đẩy xuất khẩu và thu hút đầu tư.", scoreVal: 1.5 },
+            { q: "Trong quá trình xây dựng các khu công nghiệp, việc Quảng Trị chú trọng thu hút các dự án ít ô nhiễm, công nghệ sạch thể hiện định hướng gì?", options: ["Phát triển kinh tế xanh và phát triển bền vững trong hội nhập.", "Chấp nhận mọi loại hình công nghệ gây ô nhiễm nặng.", "Ưu tiên tuyệt đối cho công nghiệp khai khoáng độc hại.", "Hạn chế tốc độ tăng trưởng công nghiệp."], correctText: "Phát triển kinh tế xanh và phát triển bền vững trong hội nhập.", scoreVal: 1.5 },
+            { q: "Sự kết hợp giữa tuyến Hành lang kinh tế Đông - Tây (EWEC) và hệ thống cảng biển nước sâu tại Quảng Trị tạo ra lợi thế gì trong vận tải?", options: ["Hình thành tuyến vận tải đa phương thức xuyên biên giới hiệu quả cao", "Làm tăng chi phí lưu kho bãi lên nhiều lần", "Gây ùn tắc giao thông nghiêm trọng dọc biên giới", "Chỉ phục vụ vận chuyển hành khách du lịch"], correctText: "Hình thành tuyến vận tải đa phương thức xuyên biên giới hiệu quả cao", scoreVal: 1.5 },
+            { q: "Đặc thù địa hình trải dài từ vùng núi cao biên giới ra đến biển Đông của Quảng Trị tác động như thế nào đến quy hoạch kinh tế?", options: ["Tạo thành các tiểu vùng kinh tế động lực liên hoàn: kinh tế cửa khẩu - công nghiệp năng lượng - kinh tế đô thị và biển đảo.", "Làm chia cắt hoàn toàn các vùng kinh tế không thể kết nối.", "Chỉ cho phép phát triển độc lập từng huyện lẻ tẻ.", "Gây bất lợi tuyệt đối không thể phát triển kinh tế tổng hợp."], correctText: "Tạo thành các tiểu vùng kinh tế động lực liên hoàn: kinh tế cửa khẩu - công nghiệp năng lượng - kinh tế đô thị và biển đảo.", scoreVal: 1.5 },
+            { q: "Việc thu hút các tập đoàn lớn quốc tế đầu tư vào khu kinh tế Đông Nam Quảng Trị phụ thuộc lớn nhất vào yếu tố nào?", options: ["Hạ tầng kỹ thuật đồng bộ, chính sách ưu đãi hấp dẫn và thủ tục thông thoáng", "Yêu cầu miễn hoàn toàn tiền điện nước vĩnh viễn", "Cam kết không tuyển dụng lao động địa phương", "Quy định cấm kiểm toán tài chính doanh nghiệp"], correctText: "Hạ tầng kỹ thuật đồng bộ, chính sách ưu đãi hấp dẫn và thủ tục thông thoáng", scoreVal: 1.5 },
+            { q: "Chính sách mở cửa thị trường và hội nhập quốc tế đã tác động tích cực như thế nào đến đời sống người dân vùng biên giới Quảng Trị?", options: ["Mở rộng cơ hội việc làm, tăng thu nhập từ dịch vụ thương mại, du lịch biên mậu", "Làm mất hoàn toàn các nghề thủ công truyền thống", "Làm giá cả sinh hoạt đắt đỏ gấp trăm lần", "Cô lập người dân với các vùng khác trong nước"], correctText: "Mở rộng cơ hội việc làm, tăng thu nhập từ dịch vụ thương mại, du lịch biên mậu", scoreVal: 1.5 },
+            { q: "Vai trò của chính quyền địa phương trong việc hỗ trợ doanh nghiệp Quảng Trị hội nhập quốc tế là gì?", options: ["Đóng vai trò kiến tạo, đồng hành, tháo gỡ điểm nghẽn và cải thiện mạnh mẽ môi trường đầu tư", "Can thiệp sâu vào mọi quyết định kinh doanh từng ngày của tư nhân", "Tự đứng ra kinh doanh thay cho doanh nghiệp tư nhân", "Thuế khóa nghiêm ngặt không hỗ trợ gì"], correctText: "Đóng vai trò kiến tạo, đồng hành, tháo gỡ điểm nghẽn và cải thiện mạnh mẽ môi trường đầu tư", scoreVal: 1.5 },
+            { q: "Trong bối cảnh cạnh tranh toàn cầu hóa, các doanh nghiệp xuất khẩu nông sản Quảng Trị buộc phải chuyển đổi điều gì để đứng vững?", options: ["Nâng cao chất lượng, truy xuất nguồn gốc rõ ràng và đáp ứng tiêu chuẩn quốc tế khắt khe", "Giảm chất lượng sản phẩm để hạ giá thành tối đa", "Chỉ bán hàng qua đường tiểu ngạch không rõ nguồn gốc", "Ngừng đóng gói bao bì nhãn mác"], correctText: "Nâng cao chất lượng, truy xuất nguồn gốc rõ ràng và đáp ứng tiêu chuẩn quốc tế khắt khe", scoreVal: 1.5 },
+            { q: "Việc phát triển du lịch thông minh và ứng dụng công nghệ số tại các di tích lịch sử - danh thắng Quảng Trị nhằm mục đích gì?", options: ["Nâng cao trải nghiệm cho du khách quốc tế và tối ưu hóa quảng bá xúc tiến du lịch", "Thay thế hoàn toàn hướng dẫn viên con người bằng người máy", "Thu phí cao gấp đôi với khách nước ngoài", "Hạn chế lượng khách đến tham quan thực tế"], correctText: "Nâng cao trải nghiệm cho du khách quốc tế và tối ưu hóa quảng bá xúc tiến du lịch", scoreVal: 1.5 },
+            { q: "Sự dịch chuyển dòng vốn đầu tư nước ngoài (FDI) vào lĩnh vực năng lượng tái tạo tại Quảng Trị minh chứng điều gì?", options: ["Sức hút từ tiềm năng tự nhiên và năng lực thích ứng xu thế phát triển xanh toàn cầu của tỉnh", "Sự bão hòa hoàn toàn của thị trường vốn trong nước", "Quy định bắt buộc nước ngoài phải đầu tư vào năng lượng", "Sự thiếu hụt trầm trọng nguồn điện lưới quốc gia"], correctText: "Sức hút từ tiềm năng tự nhiên và năng lực thích ứng xu thế phát triển xanh toàn cầu của tỉnh", scoreVal: 1.5 },
+            { q: "Tại sao tuyến Hành lang kinh tế Đông - Tây (EWEC) lại được xem là trục xương sống trong chiến lược hội nhập của Quảng Trị?", options: ["Vì nó kết nối ngắn nhất các nước trong tiểu vùng sông Mê Kông ra biển Đông qua địa bàn tỉnh", "Vì nó là tuyến đường sắt cao tốc xuyên lục địa duy nhất", "Vì nó chỉ phục vụ giao thông nội bộ giữa các xã trong huyện", "Vì nó là tuyến đường ống dẫn dầu thô độc quyền"], correctText: "Vì nó kết nối ngắn nhất các nước trong tiểu vùng sông Mê Kông ra biển Đông qua địa bàn tỉnh", scoreVal: 1.5 },
+            { q: "Để giảm thiểu rủi ro khi tham gia thị trường quốc tế, các doanh nghiệp Quảng Trị cần chú trọng điều gì trong hợp đồng ngoại thương?", options: ["Hiểu rõ luật pháp quốc tế, các điều kiện thương mại quốc tế (Incoterms) và thẩm định đối tác kỹ", "Chỉ ký kết bằng miệng dựa trên lòng tin", "Không cần quan tâm đến tỷ giá ngoại tệ", "Bỏ qua các điều khoản giải quyết tranh chấp"], correctText: "Hiểu rõ luật pháp quốc tế, các điều kiện thương mại quốc tế (Incoterms) và thẩm định đối tác kỹ", scoreVal: 1.5 },
+            { q: "Thành tựu hội nhập kinh tế quốc tế của Quảng Trị thời gian qua tạo ra tiền đề quan trọng gì cho giai đoạn tiếp theo?", options: ["Tạo đà bứt phá tăng trưởng, mở rộng không gian phát triển và nâng cao vị thế uy tín của tỉnh", "Làm cạn kiệt hoàn toàn nguồn ngân sách tỉnh", "Dẫn đến việc đóng cửa các cửa khẩu quốc tế", "Làm giảm sút nghiêm trọng thu nhập bình quân đầu người"], correctText: "Tạo đà bứt phá tăng trưởng, mở rộng không gian phát triển và nâng cao vị thế uy tín của tỉnh", scoreVal: 1.5 }
+        ];
+
+        const bankExpert = [
+            { q: "Xét theo mô hình trọng lực thương mại quốc tế và chuỗi cung ứng dọc Hành lang kinh tế Đông - Tây (EWEC), nút thắt hạ tầng logistics phức tạp nhất đòi hỏi tích hợp cơ chế 'Single Window' đa quốc gia nằm ở đâu?", options: ["Cửa khẩu Quốc tế Lao Bảo - Densavan kết hợp hành lang quá cảnh cảng nước sâu Mỹ Thủy", "Cửa khẩu Cha Lo - Na Phao kết hợp cảng Vũng Áng", "Cửa khẩu La Lay kết hợp hệ thống đường cao tốc xuyên Á", "Cửa khẩu Bờ Y kết hợp tam giác phát triển"], correctText: "Cửa khẩu Quốc tế Lao Bảo - Densavan kết hợp hành lang quá cảnh cảng nước sâu Mỹ Thủy", scoreVal: 2 },
+            { q: "Việc chuyển dịch cơ cấu kinh tế đối ngoại của Quảng Trị từ 'tiểu ngạch' sang 'thương mại chính ngạch' thông qua các FTA thế hệ mới đòi hỏi các doanh nghiệp phải đáp ứng nghiêm ngặt tiêu chuẩn nào?", options: ["Quy tắc xuất xứ hàng hóa, tiêu chuẩn ESG (Môi trường - Xã hội - Quản trị) và rào cản kỹ thuật khắt khe", "Chỉ cần giấy chứng nhận sản xuất thủ công địa phương", "Cam kết không sử dụng điện lưới quốc gia", "Bắt buộc niêm yết cổ phiếu trên sàn chứng khoán nước ngoài"], correctText: "Quy tắc xuất xứ hàng hóa, tiêu chuẩn ESG (Môi trường - Xã hội - Quản trị) và rào cản kỹ thuật khắt khe", scoreVal: 2 },
+            { q: "Trong bối cảnh hội nhập sâu vào Hiệp định Đối tác Toàn diện và Tiến bộ xuyên Thái Bình Dương (CPTPP) và EVFTA, thách thức lớn nhất mang tính hệ thống đối với năng lực hấp thụ công nghệ của các doanh nghiệp vừa và nhỏ tại Quảng Trị là gì?", options: ["Khoảng cách lớn về năng suất lao động, chi phí tuân thủ các tiêu chuẩn lao động - môi trường và chuỗi cung ứng phụ trợ yếu kém", "Thiếu hoàn toàn nguồn điện lưới quốc gia để vận hành máy móc", "Sự cấm đoán tuyệt đối của pháp luật đối với việc thành lập công ty tư nhân", "Lực lượng lao động trẻ không biết sử dụng smartphone"], correctText: "Khoảng cách lớn về năng suất lao động, chi phí tuân thủ các tiêu chuẩn lao động - môi trường và chuỗi cung ứng phụ trợ yếu kém", scoreVal: 2 },
+            { q: "Khi phân tích tác động lan tỏa (spillover effects) của dòng vốn FDI vào các dự án năng lượng tái tạo quy mô lớn tại vùng gò đồi Hướng Hóa, yếu tố nào đóng vai trò quyết định để tối đa hóa giá trị gia tăng kinh tế địa phương thay vì chỉ mang tính chất 'khoán trắng'?", options: ["Chính sách nội địa hóa chuỗi cung ứng thiết bị, chuyển giao công nghệ lõi và phát triển nguồn nhân lực kỹ thuật cao tại chỗ", "Việc miễn thuế vĩnh viễn cho nhà đầu tư nước ngoài không thu hồi", "Chỉ cho phép lao động nước ngoài vận hành toàn bộ nhà máy", "Dừng hẳn việc thu thuế tài nguyên thiên nhiên"], correctText: "Chính sách nội địa hóa chuỗi cung ứng thiết bị, chuyển giao công nghệ lõi và phát triển nguồn nhân lực kỹ thuật cao tại chỗ", scoreVal: 2 },
+            { q: "Xét về mặt chiến lược kinh tế biển đảo tích hợp với không gian phòng thủ an ninh quốc gia, định hướng phát triển chuỗi đô thị - cảng biển - dịch vụ hậu phương tại khu vực ven biển Quảng Trị đòi hỏi nguyên tắc quy hoạch nào?", options: ["Phát triển lưỡng dụng kết hợp kinh tế biển xanh bền vững với bảo đảm chủ quyền biên giới quốc gia trên biển và không gian sinh thái thích ứng biến đổi khí hậu", "Ưu tiên tối đa cho việc xây dựng các khu đô thị bê tông hóa sát mép nước biển", "Khai thác cạn kiệt tài nguyên thủy hải sản trong ngắn hạn để lấy vốn", "Tách rời hoàn toàn hoạt động kinh tế khỏi công tác quốc phòng an ninh"], correctText: "Phát triển lưỡng dụng kết hợp kinh tế biển xanh bền vững với bảo đảm chủ quyền biên giới quốc gia trên biển và không gian sinh thái thích ứng biến đổi khí hậu", scoreVal: 2 },
+            { q: "Cơ chế tài chính khí hậu quốc tế và các tín chỉ carbon từ các dự án rừng phòng hộ kết hợp điện gió tại Quảng Trị mở ra hướng đi nào trong tiến trình hội nhập kinh tế xanh toàn cầu?", options: ["Tạo nguồn thu ngoại tệ mới từ việc thương mại hóa tín chỉ carbon quốc tế, gắn kết bảo tồn sinh thái với tài chính bền vững", "Chỉ dùng để đổi lấy viện trợ lương thực khẩn cấp", "Thay thế hoàn toàn nguồn thu ngân sách từ thuế doanh nghiệp truyền thống", "Miễn phí hoàn toàn tiền điện cho tất cả các hộ gia đình"], correctText: "Tạo nguồn thu ngoại tệ mới từ việc thương mại hóa tín chỉ carbon quốc tế, gắn kết bảo tồn sinh thái với tài chính bền vững", scoreVal: 2 },
+            { q: "Trong cấu trúc logistics thông minh xuyên biên giới qua tuyến EWEC, việc áp dụng công nghệ Blockchain và mô hình hải quan phi giấy tờ (Paperless Customs) tại Lao Bảo mang lại bước đột phá gì?", options: ["Minh bạch hóa nguồn gốc xuất xứ hàng hóa, loại bỏ gian lận thương mại và rút ngắn thời gian xử lý hồ sơ xuống mức thời gian thực (real-time)", "Làm tăng gấp đôi chi phí in ấn giấy tờ hải quan", "Bắt buộc doanh nghiệp phải kê khai thủ công bằng văn bản giấy", "Làm chậm quá trình thông quan do lỗi hệ thống mạng"], correctText: "Minh bạch hóa nguồn gốc xuất xứ hàng hóa, loại bỏ gian lận thương mại và rút ngắn thời gian xử lý hồ sơ xuống mức thời gian thực (real-time)", scoreVal: 2 },
+            { q: "Sự dịch chuyển chuỗi cung ứng toàn cầu (China+1) tác động thế nào đến chiến lược thu hút FDI chọn lọc của tỉnh Quảng Trị?", options: ["Tạo cơ hội đón đầu làn sóng dịch chuyển các ngành công nghiệp phụ trợ, chế biến gỗ tinh và năng lượng sạch có hàm lượng công nghệ cao", "Buộc tỉnh phải đóng cửa toàn bộ các khu công nghiệp hiện có", "Chỉ thu hút các dự án sản xuất thủ công truyền thống đơn giản", "Ngừng tiếp nhận các nhà đầu tư đến từ khu vực châu Á"], correctText: "Tạo cơ hội đón đầu làn sóng dịch chuyển các ngành công nghiệp phụ trợ, chế biến gỗ tinh và năng lượng sạch có hàm lượng công nghệ cao", scoreVal: 2 },
+            { q: "Đánh giá tác động đa chiều của các hiệp định thương mại tự do thế hệ mới đối với cấu trúc thị trường lao động tại Quảng Trị, bài toán cấp bách nhất đặt ra cho hệ thống giáo dục nghề nghiệp là gì?", options: ["Chuyển dịch cơ cấu đào tạo gắn liền với chuẩn kỹ năng quốc tế, năng lực ngoại ngữ và tư duy làm việc trong môi trường đa văn hóa", "Cắt giảm số lượng các trường trung cấp nghề kỹ thuật", "Chỉ đào tạo lao động thủ công không cần chứng chỉ", "Tạm ngưng mọi hoạt động đào tạo trong vòng 5 năm"], correctText: "Chuyển dịch cơ cấu đào tạo gắn liền với chuẩn kỹ năng quốc tế, năng lực ngoại ngữ và tư duy làm việc trong môi trường đa văn hóa", scoreVal: 2 },
+            { q: "Mô hình 'Kinh tế hành lang' (Corridor Economy) áp dụng tại Quảng Trị qua trục EWEC đòi hỏi sự phối hợp thể chế liên tỉnh và xuyên quốc gia như thế nào để vận hành tối ưu?", options: ["Thiết lập cơ chế chia sẻ lợi ích, đồng bộ hóa tiêu chuẩn kỹ thuật hạ tầng giao thông và thủ tục hành chính thông thoáng giữa các tỉnh dọc hành lang", "Mỗi tỉnh tự quy hoạch khép kín không liên quan đến bên ngoài", "Áp dụng các mức thuế quan khác nhau tại mỗi trạm kiểm soát", "Cấm xe tải của các tỉnh lân cận lưu thông qua lại"], correctText: "Thiết lập cơ chế chia sẻ lợi ích, đồng bộ hóa tiêu chuẩn kỹ thuật hạ tầng giao thông và thủ tục hành chính thông thoáng giữa các tỉnh dọc hành lang", scoreVal: 2 }
+        ];
+
+        let selectedQuestions = [];
+        let currentIndex = 0;
+        let totalScore = 0;
+        let countdownTimer = null;
+        let timeLeft = 30;
+
+        function shuffleArray(array) {
+            let arr = [...array];
+            for (let i = arr.length - 1; i > 0; i--) {
+                let j = Math.floor(Math.random() * (i + 1));
+                [arr[i], arr[j]] = [arr[j], arr[i]];
+            }
+            return arr;
+        }
 
         function openQuizModal() {
             playSound('click');
             document.getElementById('quiz-modal').classList.remove('hidden');
-            resetQuizGame();
+            resetGame();
         }
 
         function closeQuizModal() {
             playSound('click');
-            clearInterval(quizTimer);
+            clearInterval(countdownTimer);
             document.getElementById('quiz-modal').classList.add('hidden');
         }
 
-        function startQuizGame() {
+        function initGame() {
             playSound('click');
-            quizQuestions = [...bankQuestions].sort(() => Math.random() - 0.5);
-            qIndex = 0;
-            quizScore = 0;
-            document.getElementById('quiz-intro').classList.add('hidden');
-            document.getElementById('quiz-result-area').classList.add('hidden');
-            document.getElementById('quiz-play-area').classList.remove('hidden');
-            loadQuizQuestion();
+            const chosenEasy = shuffleArray(bankEasy).slice(0, 5);
+            const chosenMedium = shuffleArray(bankMedium).slice(0, 2);
+            const chosenExpert = shuffleArray(bankExpert)[Math.floor(Math.random() * bankExpert.length)];
+            const firstSeven = shuffleArray([...chosenEasy, ...chosenMedium]);
+            selectedQuestions = [...firstSeven, chosenExpert];
+
+            currentIndex = 0;
+            totalScore = 0;
+
+            document.getElementById('game-intro').classList.add('hidden');
+            document.getElementById('game-quiz-area').classList.remove('hidden');
+            document.getElementById('score-display').classList.remove('hidden');
+            document.getElementById('score-display').classList.add('flex');
+            document.getElementById('timer-display').classList.remove('hidden');
+            document.getElementById('timer-display').classList.add('flex');
+
+            loadQuestion();
         }
 
-        function loadQuizQuestion() {
-            clearInterval(quizTimer);
-            qTimeLeft = 30;
-            document.getElementById('time-val').textContent = qTimeLeft;
+        function loadQuestion() {
+            clearInterval(countdownTimer);
+            timeLeft = 30;
+            document.getElementById('timer-val').textContent = timeLeft;
 
-            const q = quizQuestions[qIndex];
-            document.getElementById('q-counter').textContent = `CÂU HỎI ${qIndex + 1} / ${quizQuestions.length}`;
-            document.getElementById('q-text').textContent = q.q;
-
-            const shuffledOpts = [...q.options].sort(() => Math.random() - 0.5);
-            q.shuffled = shuffledOpts;
-
-            for (let i = 0; i < 4; i++) {
-                const btn = document.getElementById(`quiz-ans-${i}`);
-                btn.disabled = false;
-                btn.className = "answer-btn p-3.5 text-left text-sm font-semibold text-white flex items-center gap-3 cursor-pointer";
-                document.getElementById(`quiz-text-${i}`).textContent = shuffledOpts[i];
+            const q = selectedQuestions[currentIndex];
+            document.getElementById('question-counter').textContent = `CÂU HỎI ${currentIndex + 1} / 8`;
+            
+            const badge = document.getElementById('question-badge');
+            if (q.scoreVal === 1) {
+                badge.textContent = "Dễ (+1.0 điểm)";
+                badge.className = "bg-emerald-500/20 text-emerald-300 px-3 py-1 rounded-full text-xs font-bold border border-emerald-500/40";
+            } else if (q.scoreVal === 1.5) {
+                badge.textContent = "Trung Bình - Suy Luận (+1.5 điểm)";
+                badge.className = "bg-amber-500/20 text-amber-300 px-3 py-1 rounded-full text-xs font-bold border border-amber-500/40";
+            } else {
+                badge.textContent = "Cực Khó - Mở Rộng (+2.0 điểm)";
+                badge.className = "bg-rose-500/20 text-rose-300 px-3 py-1 rounded-full text-xs font-bold border border-rose-500/40";
             }
 
-            quizTimer = setInterval(() => {
-                qTimeLeft--;
-                document.getElementById('time-val').textContent = qTimeLeft;
-                if (qTimeLeft <= 0) {
-                    clearInterval(quizTimer);
-                    handleQuizTimeout();
+            document.getElementById('question-text').textContent = q.q;
+            document.getElementById('current-score-val').textContent = totalScore.toFixed(1);
+
+            const shuffledOptions = shuffleArray(q.options);
+            q.shuffledOptions = shuffledOptions;
+
+            for (let i = 0; i < 4; i++) {
+                const btn = document.getElementById(`ans-${i}`);
+                btn.className = 'answer-btn p-4 text-left text-sm md:text-base font-semibold text-white flex items-center gap-3 cursor-pointer';
+                document.getElementById(`text-${i}`).textContent = shuffledOptions[i];
+                btn.disabled = false;
+            }
+
+            countdownTimer = setInterval(() => {
+                timeLeft--;
+                document.getElementById('timer-val').textContent = timeLeft;
+                if (timeLeft <= 0) {
+                    clearInterval(countdownTimer);
+                    handleTimeOut();
                 }
             }, 1000);
         }
 
-        function handleQuizTimeout() {
+        function handleTimeOut() {
             playSound('wrong');
-            for (let i = 0; i < 4; i++) document.getElementById(`quiz-ans-${i}`).disabled = true;
-            const q = quizQuestions[qIndex];
+            for (let i = 0; i < 4; i++) document.getElementById(`ans-${i}`).disabled = true;
+            const q = selectedQuestions[currentIndex];
             for (let i = 0; i < 4; i++) {
-                if (q.shuffled[i] === q.correctText) {
-                    document.getElementById(`quiz-ans-${i}`).classList.add('correct');
+                if (q.shuffledOptions[i] === q.correctText) {
+                    document.getElementById(`ans-${i}`).classList.add('correct');
                     break;
                 }
             }
             setTimeout(() => {
-                qIndex++;
-                if (qIndex < quizQuestions.length) loadQuizQuestion();
-                else showQuizResult();
-            }, 1300);
+                currentIndex++;
+                if (currentIndex < selectedQuestions.length) loadQuestion();
+                else showFinalRank();
+            }, 1400);
         }
 
-        function answerQuiz(idx) {
+        function selectAnswer(idx) {
             playSound('click');
-            clearInterval(quizTimer);
-            for (let i = 0; i < 4; i++) document.getElementById(`quiz-ans-${i}`).disabled = true;
+            clearInterval(countdownTimer);
+            for (let i = 0; i < 4; i++) document.getElementById(`ans-${i}`).disabled = true;
 
-            const q = quizQuestions[qIndex];
-            const chosen = q.shuffled[idx];
-            const chosenBtn = document.getElementById(`quiz-ans-${idx}`);
-            let correctIdx = -1;
+            const q = selectedQuestions[currentIndex];
+            const chosenText = q.shuffledOptions[idx];
+            const chosenBtn = document.getElementById(`ans-${idx}`);
+            let correctBtnIdx = -1;
 
             for (let i = 0; i < 4; i++) {
-                if (q.shuffled[i] === q.correctText) {
-                    correctIdx = i;
-                    break;
+                if (q.shuffledOptions[i] === q.correctText) {
+                    correctBtnIdx = i; break;
                 }
             }
-            const correctBtn = document.getElementById(`quiz-ans-${correctIdx}`);
+            const correctBtn = document.getElementById(`ans-${correctBtnIdx}`);
 
-            if (chosen === q.correctText) {
+            if (chosenText === q.correctText) {
                 playSound('correct');
                 chosenBtn.classList.add('correct');
-                quizScore += q.scoreVal;
+                totalScore += q.scoreVal;
             } else {
                 playSound('wrong');
                 chosenBtn.classList.add('wrong');
                 if (correctBtn) correctBtn.classList.add('correct');
             }
+            document.getElementById('current-score-val').textContent = totalScore.toFixed(1);
 
             setTimeout(() => {
-                qIndex++;
-                if (qIndex < quizQuestions.length) loadQuizQuestion();
-                else showQuizResult();
-            }, 1300);
+                currentIndex++;
+                if (currentIndex < selectedQuestions.length) loadQuestion();
+                else showFinalRank();
+            }, 1400);
         }
 
-        function showQuizResult() {
-            clearInterval(quizTimer);
+        function showFinalRank() {
+            clearInterval(countdownTimer);
             playSound('win');
-            document.getElementById('quiz-play-area').classList.add('hidden');
-            document.getElementById('quiz-result-area').classList.remove('hidden');
-            document.getElementById('quiz-score-summary').textContent = `Tổng số điểm: ${quizScore.toFixed(1)} / 8.0 điểm`;
+            document.getElementById('game-quiz-area').classList.add('hidden');
+            document.getElementById('score-display').classList.add('hidden');
+            document.getElementById('timer-display').classList.add('hidden');
+            document.getElementById('game-result-area').classList.remove('hidden');
+
+            let rankName = "", rankIcon = "", rankColor = "";
+
+            if (totalScore >= 10.0) {
+                rankName = "Thách Đấu (Cao Thủ Tối Thượng)";
+                rankIcon = "fas fa-crown text-amber-400";
+                rankColor = "from-amber-400 to-yellow-200";
+            } else if (totalScore >= 8.0) {
+                rankName = "Tinh Anh";
+                rankIcon = "fas fa-gem text-purple-400";
+                rankColor = "from-purple-400 to-indigo-300";
+            } else if (totalScore >= 6.0) {
+                rankName = "Kim Cương";
+                rankIcon = "fas fa-shield-alt text-cyan-400";
+                rankColor = "from-cyan-400 to-blue-300";
+            } else if (totalScore >= 4.0) {
+                rankName = "Bạch Kim";
+                rankIcon = "fas fa-award text-emerald-400";
+                rankColor = "from-emerald-400 to-teal-300";
+            } else {
+                rankName = "Đồng / Vàng";
+                rankIcon = "fas fa-medal text-amber-600";
+                rankColor = "from-amber-600 to-amber-400";
+            }
+
+            document.getElementById('rank-icon').innerHTML = `<i class="${rankIcon}"></i>`;
+            document.getElementById('final-score').innerHTML = `Tổng số điểm: <b>${totalScore.toFixed(1)} / 10.0 điểm</b>`;
+            document.getElementById('final-rank').innerHTML = `<span class="text-2xl md:text-3xl font-black bg-clip-text text-transparent bg-gradient-to-r ${rankColor}">${rankName}</span>`;
+
+            let extraMsg = "";
+            if (totalScore >= 10.0) {
+                extraMsg = `<div class="p-4 bg-amber-500/20 border border-amber-500/50 rounded-2xl text-amber-300 font-bold text-base shadow-[0_0_30px_rgba(245,158,11,0.3)] animate-bounce mt-4">🎉 XUẤT SẮC! Chúc mừng bạn đã đạt tuyệt đối 10.0 điểm và nhận được MỘT PHẦN QUÀ BẤT NGỜ!</div>`;
+            }
+            document.getElementById('extra-msg').innerHTML = extraMsg;
         }
 
-        function resetQuizGame() {
-            clearInterval(quizTimer);
-            document.getElementById('quiz-result-area').classList.add('hidden');
-            document.getElementById('quiz-play-area').classList.add('hidden');
-            document.getElementById('quiz-intro').classList.remove('hidden');
+        function resetGame() {
+            clearInterval(countdownTimer);
+            playSound('click');
+            document.getElementById('game-result-area').classList.add('hidden');
+            document.getElementById('game-quiz-area').classList.add('hidden');
+            document.getElementById('score-display').classList.add('hidden');
+            document.getElementById('timer-display').classList.add('hidden');
+            document.getElementById('game-intro').classList.remove('hidden');
         }
     </script>
 </body>
